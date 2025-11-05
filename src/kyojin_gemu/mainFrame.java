@@ -6,6 +6,9 @@ package kyojin_gemu;
 
 import javax.swing.*;
 import java.awt.*;
+import kyojin_gemu.utils.DatabaseConection;
+import java.sql.Connection;
+
 
 public class mainFrame extends javax.swing.JFrame {
 
@@ -16,7 +19,19 @@ public class mainFrame extends javax.swing.JFrame {
         initComponents();
         mainPanel = jPanel1;
         showPanel(new menuPanel(this));
+        testkoneksi();
 
+    }
+    
+    
+//    koneksi database
+    private void testkoneksi(){
+        Connection conn = DatabaseConection.getConnection();
+        if (conn != null) {
+            System.out.println("koneksi oke");
+        }else{
+            System.out.println("koneksi gagal");
+        }
     }
     
     public void showPanel(JPanel panel) {
@@ -94,6 +109,7 @@ public class mainFrame extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new mainFrame().setVisible(true);
+                
             }
         });
     }
