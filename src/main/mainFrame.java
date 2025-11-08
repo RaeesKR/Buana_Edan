@@ -2,12 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package kyojin_gemu;
+package main;
 
 import javax.swing.*;
 import java.awt.*;
 import kyojin_gemu.utils.DatabaseConection;
 import java.sql.Connection;
+import ui.menu.*;
+import ui.auth.*;
 
 
 public class mainFrame extends javax.swing.JFrame {
@@ -18,7 +20,7 @@ public class mainFrame extends javax.swing.JFrame {
         setTitle("Game Project - JFrame Form");
         initComponents();
         mainPanel = jPanel1;
-        showPanel(new menuPanel(this));
+        showPanel(new startPanel(this));
         testkoneksi();
 
     }

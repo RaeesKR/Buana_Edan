@@ -2,7 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package kyojin_gemu;
+package ui.auth;
+import main.mainFrame;
+import ui.menu.*;
+import ui.auth.*;
 
 /**
  *
@@ -13,8 +16,10 @@ public class loginPage extends javax.swing.JPanel {
     /**
      * Creates new form loginPage
      */
-    public loginPage() {
+    private mainFrame mainFrame;
+    public loginPage(mainFrame mainFrame) {
         initComponents();
+        this.mainFrame = mainFrame;
     }
 
     /**
@@ -33,6 +38,7 @@ public class loginPage extends javax.swing.JPanel {
         btnLogin = new javax.swing.JButton();
         btnRegis = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        notif = new javax.swing.JLabel();
 
         txtUser.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         txtUser.addActionListener(new java.awt.event.ActionListener() {
@@ -53,10 +59,22 @@ public class loginPage extends javax.swing.JPanel {
         });
 
         btnLogin.setText("Login");
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoginActionPerformed(evt);
+            }
+        });
 
         btnRegis.setText("Register");
+        btnRegis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegisActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("Login / Register");
+
+        notif.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -80,6 +98,11 @@ public class loginPage extends javax.swing.JPanel {
                         .addGap(376, 376, 376)
                         .addComponent(jLabel4)))
                 .addContainerGap(324, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(266, 266, 266)
+                    .addComponent(notif, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(267, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -99,6 +122,11 @@ public class loginPage extends javax.swing.JPanel {
                     .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnRegis, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(136, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(268, 268, 268)
+                    .addComponent(notif)
+                    .addContainerGap(268, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -110,6 +138,25 @@ public class loginPage extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPswdActionPerformed
 
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        // TODO add your handling code here:
+        final String username = "admin";
+        final String password = "admin123";
+        
+        if (txtUser.getText().equals(username)&& txtPswd.getText().equals(password)) {
+            mainFrame.showPanel(new menuPanel(mainFrame));
+        }else{
+            txtUser.setText("");
+            txtPswd.setText("");        
+            notif.setText("Login Gagal, Silahkan coba Kembali"); 
+        }
+    }//GEN-LAST:event_btnLoginActionPerformed
+
+    private void btnRegisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisActionPerformed
+        // TODO add your handling code here:
+        mainFrame.showPanel(new registerPage(mainFrame));
+    }//GEN-LAST:event_btnRegisActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;
@@ -117,6 +164,7 @@ public class loginPage extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel notif;
     private javax.swing.JTextField txtPswd;
     private javax.swing.JTextField txtUser;
     // End of variables declaration//GEN-END:variables

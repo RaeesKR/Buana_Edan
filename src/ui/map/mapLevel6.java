@@ -2,20 +2,28 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package kyojin_gemu;
+package ui.map;
 
 /**
  *
  * @author Dhenis
  */
-public class mapLevel5 extends javax.swing.JPanel {
+import main.mainFrame;
+import javax.swing.*;
+import java.awt.event.*;
+
+public class mapLevel6 extends javax.swing.JPanel {
 
     /**
-     * Creates new form mapLevel5
+     * Creates new form mapLevel6
      */
-    public mapLevel5() {
+    private mainFrame mainFrame;
+    public mapLevel6(mainFrame mainFrame) {
         initComponents();
+        this.mainFrame = mainFrame;
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,6 +39,11 @@ public class mapLevel5 extends javax.swing.JPanel {
         btnDeff = new javax.swing.JButton();
 
         btnback.setText("Back");
+        btnback.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnbackActionPerformed(evt);
+            }
+        });
 
         btnAttack.setText("Attack");
 
@@ -41,7 +54,7 @@ public class mapLevel5 extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(255, Short.MAX_VALUE)
+                .addContainerGap(256, Short.MAX_VALUE)
                 .addComponent(btnAttack)
                 .addGap(157, 157, 157)
                 .addComponent(btnDeff)
@@ -63,6 +76,11 @@ public class mapLevel5 extends javax.swing.JPanel {
                 .addGap(139, 139, 139))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
+        // TODO add your handling code here:
+        mainFrame.showPanel(new mapPanel(mainFrame));
+    }//GEN-LAST:event_btnbackActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

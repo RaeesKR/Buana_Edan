@@ -2,10 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package kyojin_gemu;
+package ui.menu;
 
+import main.mainFrame;
 import javax.swing.*;
 import java.awt.event.*;
+import ui.map.*;
 
 public class storyPanel extends javax.swing.JPanel {
 
@@ -31,12 +33,20 @@ public class storyPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnLanjut = new javax.swing.JButton();
+        Story = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
-        btnLanjut.setText("Lanjut");
-        btnLanjut.addActionListener(new java.awt.event.ActionListener() {
+        Story.setText("Story");
+        Story.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLanjutActionPerformed(evt);
+                StoryActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("Ke Map");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -45,26 +55,36 @@ public class storyPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(368, 368, 368)
-                .addComponent(btnLanjut)
-                .addContainerGap(398, Short.MAX_VALUE))
+                .addGap(233, 233, 233)
+                .addComponent(Story)
+                .addGap(131, 131, 131)
+                .addComponent(jButton1)
+                .addContainerGap(330, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(269, Short.MAX_VALUE)
-                .addComponent(btnLanjut)
-                .addGap(241, 241, 241))
+                .addContainerGap(334, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Story)
+                    .addComponent(jButton1))
+                .addGap(176, 176, 176))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnLanjutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLanjutActionPerformed
+    private void StoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StoryActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this, "Ini KIsahku", "BLABLABKA" ,JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_StoryActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         mainFrame.showPanel(new mapPanel(mainFrame));
-    }//GEN-LAST:event_btnLanjutActionPerformed
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnLanjut;
+    private javax.swing.JButton Story;
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }

@@ -17,7 +17,7 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="256" max="32767" attributes="0"/>
+              <EmptySpace pref="257" max="32767" attributes="0"/>
               <Component id="btnAttack" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="157" max="-2" attributes="0"/>
               <Component id="btnDeff" min="-2" max="-2" attributes="0"/>
@@ -35,7 +35,7 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
               <Component id="btnback" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="335" max="32767" attributes="0"/>
+              <EmptySpace pref="338" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnDeff" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnAttack" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -46,9 +46,9 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="btnback">
+    <Component class="javax.swing.JButton" name="btnDeff">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Back"/>
+        <Property name="text" type="java.lang.String" value="Deffense"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnAttack">
@@ -56,10 +56,13 @@
         <Property name="text" type="java.lang.String" value="Attack"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnDeff">
+    <Component class="javax.swing.JButton" name="btnback">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Deffense"/>
+        <Property name="text" type="java.lang.String" value="Back"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnbackActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

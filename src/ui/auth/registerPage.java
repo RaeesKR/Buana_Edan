@@ -2,19 +2,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package kyojin_gemu;
+package ui.auth;
 
 /**
  *
  * @author Dhenis
  */
+import main.mainFrame;
 public class registerPage extends javax.swing.JPanel {
 
     /**
      * Creates new form registerPage
      */
-    public registerPage() {
+    private mainFrame mainFrame;
+    public registerPage(mainFrame mainFrame) {
         initComponents();
+        this.mainFrame = mainFrame;
     }
 
     /**

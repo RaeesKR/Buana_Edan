@@ -2,16 +2,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package kyojin_gemu;
+package ui.map;
 
 /**
  *
  * @author Dhenis
  */
+import main.mainFrame;
 import javax.swing.*;
 import java.awt.event.*;
-public class mapLevel2 extends javax.swing.JPanel {
 
+public class mapLevel2 extends javax.swing.JPanel {
     /**
      * Creates new form mapLevel2
      */
@@ -35,6 +36,11 @@ public class mapLevel2 extends javax.swing.JPanel {
         btnDeff = new javax.swing.JButton();
 
         btnback.setText("Back");
+        btnback.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnbackActionPerformed(evt);
+            }
+        });
 
         btnAttack.setText("Attack");
 
@@ -67,6 +73,11 @@ public class mapLevel2 extends javax.swing.JPanel {
                 .addGap(139, 139, 139))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
+        // TODO add your handling code here:
+        mainFrame.showPanel(new mapPanel(mainFrame));
+    }//GEN-LAST:event_btnbackActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

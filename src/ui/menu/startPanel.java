@@ -2,26 +2,29 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package kyojin_gemu;
+package ui.menu;
 
 /**
  *
  * @author Dhenis
  */
+import ui.menu.menuPanel;
+import main.mainFrame;
 import javax.swing.*;
 import java.awt.event.*;
+import ui.auth.*;
 
-public class menuPanel extends javax.swing.JPanel {
+public class startPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form menuPanel
      */
     private mainFrame mainFrame;
-    public menuPanel() {
+    public startPanel() {
         initComponents();
     }
 
-    public menuPanel(mainFrame mainFrame) {
+    public startPanel(mainFrame mainFrame) {
         initComponents();
         this.mainFrame = mainFrame;
     }
@@ -75,7 +78,7 @@ public class menuPanel extends javax.swing.JPanel {
 
     private void btnStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStartActionPerformed
         // TODO add your handling code here:
-        mainFrame.showPanel(new storyPanel(mainFrame));
+        mainFrame.showPanel(new loginPage(mainFrame));
     }//GEN-LAST:event_btnStartActionPerformed
 
 

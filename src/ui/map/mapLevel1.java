@@ -2,20 +2,26 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package kyojin_gemu;
+package ui.map;
 
 /**
  *
  * @author Dhenis
  */
-public class mapLevel3 extends javax.swing.JPanel {
+import main.mainFrame;
+import javax.swing.*;
+import java.awt.event.*;
 
+public class mapLevel1 extends javax.swing.JPanel {
     /**
-     * Creates new form mapLevel3
+     * Creates new form mapLevel1
      */
-    public mapLevel3() {
+    private mainFrame mainFrame;
+    public mapLevel1(mainFrame mainFrame) {
         initComponents();
+        this.mainFrame = mainFrame;
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -26,22 +32,27 @@ public class mapLevel3 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnback = new javax.swing.JButton();
-        btnAttack = new javax.swing.JButton();
         btnDeff = new javax.swing.JButton();
+        btnAttack = new javax.swing.JButton();
+        btnback = new javax.swing.JButton();
 
-        btnback.setText("Back");
+        btnDeff.setText("Deffense");
 
         btnAttack.setText("Attack");
 
-        btnDeff.setText("Deffense");
+        btnback.setText("Back");
+        btnback.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnbackActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(260, Short.MAX_VALUE)
+                .addContainerGap(257, Short.MAX_VALUE)
                 .addComponent(btnAttack)
                 .addGap(157, 157, 157)
                 .addComponent(btnDeff)
@@ -56,13 +67,18 @@ public class mapLevel3 extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addComponent(btnback)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 336, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 338, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnDeff)
                     .addComponent(btnAttack))
                 .addGap(139, 139, 139))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
+        // TODO add your handling code here:
+        mainFrame.showPanel(new mapLevel6(mainFrame));
+    }//GEN-LAST:event_btnbackActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
