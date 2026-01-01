@@ -41,6 +41,9 @@ public class mapPanel extends javax.swing.JPanel {
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         btnback = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnLevel1.setText("Level 1");
         btnLevel1.addActionListener(new java.awt.event.ActionListener() {
@@ -48,6 +51,7 @@ public class mapPanel extends javax.swing.JPanel {
                 btnLevel1ActionPerformed(evt);
             }
         });
+        add(btnLevel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, -1, -1));
 
         btnLevel2.setText("Level 2");
         btnLevel2.addActionListener(new java.awt.event.ActionListener() {
@@ -55,6 +59,7 @@ public class mapPanel extends javax.swing.JPanel {
                 btnLevel2ActionPerformed(evt);
             }
         });
+        add(btnLevel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 370, -1, -1));
 
         jButton3.setText("Level 3");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -62,6 +67,7 @@ public class mapPanel extends javax.swing.JPanel {
                 jButton3ActionPerformed(evt);
             }
         });
+        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, -1, -1));
 
         jButton4.setText("Level 4");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -69,6 +75,7 @@ public class mapPanel extends javax.swing.JPanel {
                 jButton4ActionPerformed(evt);
             }
         });
+        add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 400, -1, -1));
 
         jButton5.setText("Level 5");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -76,6 +83,7 @@ public class mapPanel extends javax.swing.JPanel {
                 jButton5ActionPerformed(evt);
             }
         });
+        add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 250, -1, -1));
 
         jButton6.setText("Level 6");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -83,6 +91,7 @@ public class mapPanel extends javax.swing.JPanel {
                 jButton6ActionPerformed(evt);
             }
         });
+        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 250, -1, -1));
 
         btnback.setText("Back");
         btnback.addActionListener(new java.awt.event.ActionListener() {
@@ -90,63 +99,10 @@ public class mapPanel extends javax.swing.JPanel {
                 btnbackActionPerformed(evt);
             }
         });
+        add(btnback, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(252, 252, 252)
-                .addComponent(btnLevel2)
-                .addGap(199, 199, 199)
-                .addComponent(jButton4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 142, Short.MAX_VALUE)
-                .addComponent(jButton6)
-                .addGap(28, 28, 28))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton3)
-                .addGap(375, 375, 375))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(150, 150, 150)
-                .addComponent(btnLevel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton5)
-                .addGap(130, 130, 130))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(btnback)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(btnback)
-                        .addGap(131, 131, 131)
-                        .addComponent(btnLevel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(173, 173, 173)
-                        .addComponent(jButton5)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(34, 34, 34)
-                                .addComponent(btnLevel2))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(42, 42, 42)
-                                .addComponent(jButton4)))
-                        .addGap(29, 29, 29))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton6)
-                        .addGap(10, 10, 10)))
-                .addComponent(jButton3)
-                .addContainerGap(206, Short.MAX_VALUE))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/images/background/MAP.png"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLevel1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLevel1ActionPerformed
@@ -193,5 +149,6 @@ public class mapPanel extends javax.swing.JPanel {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
