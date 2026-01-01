@@ -42,7 +42,6 @@ public class menuPanel extends javax.swing.JPanel {
         btnOption = new javax.swing.JButton();
         btnInventory = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -57,7 +56,7 @@ public class menuPanel extends javax.swing.JPanel {
                 btnNewActionPerformed(evt);
             }
         });
-        add(btnNew, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 380, 110, 30));
+        add(btnNew, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 370, 100, 50));
 
         btnOption.setFont(new java.awt.Font("Mistral", 1, 36)); // NOI18N
         btnOption.setBorder(null);
@@ -69,7 +68,7 @@ public class menuPanel extends javax.swing.JPanel {
                 btnOptionActionPerformed(evt);
             }
         });
-        add(btnOption, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 430, 70, 30));
+        add(btnOption, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 420, 80, 40));
 
         btnInventory.setBackground(new java.awt.Color(0,0,0,0));
         btnInventory.setBorder(null);
@@ -81,7 +80,7 @@ public class menuPanel extends javax.swing.JPanel {
                 btnInventoryActionPerformed(evt);
             }
         });
-        add(btnInventory, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 480, 90, 20));
+        add(btnInventory, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 470, 100, 40));
 
         btnExit.setFont(new java.awt.Font("Mistral", 1, 36)); // NOI18N
         btnExit.setBorder(null);
@@ -93,11 +92,9 @@ public class menuPanel extends javax.swing.JPanel {
                 btnExitActionPerformed(evt);
             }
         });
-        add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 520, 70, 30));
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(439, 315, -1, -1));
+        add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 520, 100, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/images/background/startBackground.jpeg"))); // NOI18N
-        jLabel2.setText("jLabel2");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/images/background/UI MENU EXIT.png"))); // NOI18N
         jLabel2.setMaximumSize(new java.awt.Dimension(800, 600));
         jLabel2.setMinimumSize(new java.awt.Dimension(800, 600));
         jLabel2.setPreferredSize(new java.awt.Dimension(800, 600));
@@ -119,9 +116,9 @@ public class menuPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Player belum diset. Silakan login terlebih dahulu.", "Inventory", JOptionPane.INFORMATION_MESSAGE);
             return;
         }
-        // Open the dedicated InventoryPanel for better inventory management
+        // Open the Inventory UI (InventoryPanel removed; logic moved to Inventory)
         if (mainFrame != null) {
-            mainFrame.showPanel(new InventoryPanel(mainFrame));
+            mainFrame.showPanel(new Inventory(mainFrame));
         }
     }//GEN-LAST:event_btnInventoryActionPerformed
 
@@ -135,7 +132,6 @@ public class menuPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnInventory;
     private javax.swing.JButton btnNew;
     private javax.swing.JButton btnOption;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

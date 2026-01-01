@@ -36,6 +36,9 @@ public class registerPage extends javax.swing.JPanel {
         txtPswd1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         btnRegis = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtUser.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         txtUser.addActionListener(new java.awt.event.ActionListener() {
@@ -43,6 +46,7 @@ public class registerPage extends javax.swing.JPanel {
                 txtUserActionPerformed(evt);
             }
         });
+        add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(303, 188, 197, 32));
 
         txtPswd.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         txtPswd.addActionListener(new java.awt.event.ActionListener() {
@@ -50,10 +54,17 @@ public class registerPage extends javax.swing.JPanel {
                 txtPswdActionPerformed(evt);
             }
         });
+        add(txtPswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(303, 248, 197, 32));
 
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Username");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(303, 166, -1, -1));
 
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Password");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(303, 226, -1, -1));
 
         txtPswd1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         txtPswd1.addActionListener(new java.awt.event.ActionListener() {
@@ -61,50 +72,19 @@ public class registerPage extends javax.swing.JPanel {
                 txtPswd1ActionPerformed(evt);
             }
         });
+        add(txtPswd1, new org.netbeans.lib.awtextra.AbsoluteConstraints(303, 308, 197, 32));
 
+        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Confirm Password");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(303, 286, -1, -1));
 
+        btnRegis.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
         btnRegis.setText("Register");
+        add(btnRegis, new org.netbeans.lib.awtextra.AbsoluteConstraints(354, 369, 98, 36));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(323, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(txtUser, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtPswd, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel3)
-                            .addComponent(txtPswd1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(319, 319, 319))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnRegis, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(367, 367, 367))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(167, 167, 167)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtUser, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtPswd, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtPswd1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addComponent(btnRegis, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(127, Short.MAX_VALUE))
-        );
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/images/background/UI BACKGROUND.jpg"))); // NOI18N
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUserActionPerformed
@@ -125,6 +105,7 @@ public class registerPage extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField txtPswd;
     private javax.swing.JTextField txtPswd1;
     private javax.swing.JTextField txtUser;
