@@ -104,7 +104,7 @@ public class mapLevel4 extends javax.swing.JPanel {
         }
 
         // Level-specific dialog content
-        String message = "Kamu memasuki level 4. Di hadapanmu muncul seekor Dragon muda. Siap untuk bertarung?";
+        String message = "Kamu memasuki level 4. Di hadapanmu muncul seekor Dragon. Siap untuk bertarung?";
 
         // Ask for confirmation to start the fight
         int confirm = JOptionPane.showConfirmDialog(this, message, "Encounter - Level 4", JOptionPane.YES_NO_OPTION);
@@ -115,7 +115,7 @@ public class mapLevel4 extends javax.swing.JPanel {
         // After dialog is closed, switch to the dedicated fight panel (FightLevel1)
         if (this.mainFrame != null) {
             // create first-stage monster (Keroco) for fight
-            Monster fightMonster = new Monster("Keroco", 30, 6, 2);
+            Monster fightMonster = new Monster("Young Dragon", 60, 6, 2);
             ui.fight.FightLevel4 fightPanel = new ui.fight.FightLevel4(this.mainFrame, this.player, fightMonster);
             this.mainFrame.showPanel(fightPanel);
         } else {

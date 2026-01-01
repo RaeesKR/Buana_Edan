@@ -115,7 +115,7 @@ public class mapLevel1 extends javax.swing.JPanel {
         // After dialog is closed, switch to the dedicated fight panel (FightLevel1)
         if (this.mainFrame != null) {
             // create first-stage monster (Keroco) for fight
-            Monster fightMonster = new Monster("Keroco", 30, 6, 2);
+            Monster fightMonster = new Monster("Goblin", 30, 6, 2);
             ui.fight.FightLevel1 fightPanel = new ui.fight.FightLevel1(this.mainFrame, this.player, fightMonster);
             this.mainFrame.showPanel(fightPanel);
         } else {

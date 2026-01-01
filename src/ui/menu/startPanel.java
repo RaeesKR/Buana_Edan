@@ -40,6 +40,8 @@ public class startPanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         btnStart = new javax.swing.JButton();
 
+        setMinimumSize(new java.awt.Dimension(800, 600));
+
         jLabel3.setFont(new java.awt.Font("Javanese Text", 1, 65)); // NOI18N
         jLabel3.setText("KYOJIN GEMU");
 
@@ -56,7 +58,7 @@ public class startPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(180, Short.MAX_VALUE)
+                .addContainerGap(149, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel3)
@@ -72,7 +74,7 @@ public class startPanel extends javax.swing.JPanel {
                 .addComponent(jLabel3)
                 .addGap(37, 37, 37)
                 .addComponent(btnStart, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(156, Short.MAX_VALUE))
+                .addContainerGap(220, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

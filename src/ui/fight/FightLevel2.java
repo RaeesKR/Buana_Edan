@@ -12,7 +12,6 @@ import logic.DropItemAfterDefeatMonster;
 import java.util.Random;
 import model.Player;
 import model.Monster;
-import ui.dialog.FightDialog;
 
 public class FightLevel2 extends javax.swing.JPanel {
 
@@ -238,8 +237,8 @@ public class FightLevel2 extends javax.swing.JPanel {
                 if (stage == 1) {
                     stage = 2;
                     finished = false;
-                    monster = new Monster("Boss Level 2", 140, 18, 10);
-                    JOptionPane.showMessageDialog(this, "Keroco dikalahkan! Boss muncul!");
+                    monster = new Monster("King Orcus", 140, 18, 10);
+                    JOptionPane.showMessageDialog(this, "Orc dikalahkan! Boss muncul!");
                     updateHpLabels();
                 } else {
                     if (mainFrame != null) {
@@ -252,7 +251,7 @@ public class FightLevel2 extends javax.swing.JPanel {
                 player.setMaxHp(100);
                 player.restoreFullHp();
                 updateHpLabels();
-                JOptionPane.showMessageDialog(this, "Kamu kalah. HP direset menjadi 100.", "Kalah", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Kamu kalah. HP direset", "Kalah", JOptionPane.INFORMATION_MESSAGE);
             }
         }
     }

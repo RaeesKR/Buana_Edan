@@ -12,7 +12,7 @@ import logic.DropItemAfterDefeatMonster;
 import java.util.Random;
 import model.Player;
 import model.Monster;
-import ui.dialog.FightDialog;
+
 
 public class FightLevel1 extends javax.swing.JPanel {
 
@@ -229,8 +229,8 @@ public class FightLevel1 extends javax.swing.JPanel {
                     // first stage (Keroco) defeated -> spawn boss
                     stage = 2;
                     finished = false;
-                    monster = new Monster("Boss Level 1", 120, 15, 8);
-                    JOptionPane.showMessageDialog(this, "Keroco dikalahkan! Boss muncul!");
+                    monster = new Monster("King Goblin", 120, 15, 8);
+                    JOptionPane.showMessageDialog(this, "Goblin dikalahkan! King Goblin Muncul");
                     updateHpLabels();
                 } else {
                     // second stage finished (boss defeated) -> return to map
@@ -244,7 +244,7 @@ public class FightLevel1 extends javax.swing.JPanel {
                 player.setMaxHp(100);
                 player.restoreFullHp();
                 updateHpLabels();
-                JOptionPane.showMessageDialog(this, "Kamu kalah. HP direset menjadi 100.", "Kalah", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Kamu kalah. HP direset", "Kalah", JOptionPane.INFORMATION_MESSAGE);
             }
         }
     }

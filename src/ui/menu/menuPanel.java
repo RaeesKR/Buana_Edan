@@ -38,79 +38,70 @@ public class menuPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel3 = new javax.swing.JLabel();
         btnNew = new javax.swing.JButton();
         btnOption = new javax.swing.JButton();
+        btnInventory = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
-        jLabel3.setFont(new java.awt.Font("Javanese Text", 1, 65)); // NOI18N
-        jLabel3.setText("KYOJIN GEMU");
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnNew.setFont(new java.awt.Font("Mistral", 1, 36)); // NOI18N
-        btnNew.setText("NEW GAME");
+        btnNew.setBorder(null);
+        btnNew.setBorderPainted(false);
+        btnNew.setContentAreaFilled(false);
+        btnNew.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnNew.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNewActionPerformed(evt);
             }
         });
+        add(btnNew, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 380, 110, 30));
 
         btnOption.setFont(new java.awt.Font("Mistral", 1, 36)); // NOI18N
-        btnOption.setText("OPTION");
+        btnOption.setBorder(null);
+        btnOption.setBorderPainted(false);
+        btnOption.setContentAreaFilled(false);
+        btnOption.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnOption.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOptionActionPerformed(evt);
             }
         });
+        add(btnOption, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 430, 70, 30));
 
-        btnInventory = new javax.swing.JButton();
-        btnInventory.setFont(new java.awt.Font("Mistral", 1, 36)); // NOI18N
-        btnInventory.setText("INVENTORY");
+        btnInventory.setBackground(new java.awt.Color(0,0,0,0));
+        btnInventory.setBorder(null);
+        btnInventory.setBorderPainted(false);
+        btnInventory.setContentAreaFilled(false);
+        btnInventory.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnInventory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                // open inventory panel
-                if (mainFrame != null) {
-                    mainFrame.showPanel(new InventoryPanel(mainFrame));
-                }
+                btnInventoryActionPerformed(evt);
             }
         });
+        add(btnInventory, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 480, 90, 20));
 
         btnExit.setFont(new java.awt.Font("Mistral", 1, 36)); // NOI18N
-        btnExit.setText("EXIT");
+        btnExit.setBorder(null);
+        btnExit.setBorderPainted(false);
+        btnExit.setContentAreaFilled(false);
+        btnExit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExitActionPerformed(evt);
             }
         });
+        add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 520, 70, 30));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(439, 315, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(btnNew)
-                    .addComponent(btnOption)
-                    .addComponent(btnInventory)
-                    .addComponent(btnExit))
-                .addContainerGap(308, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(75, 75, 75)
-                .addComponent(jLabel3)
-                .addGap(43, 43, 43)
-                .addComponent(btnNew)
-                .addGap(18, 18, 18)
-                .addComponent(btnOption)
-                .addGap(18, 18, 18)
-                .addComponent(btnInventory)
-                .addGap(18, 18, 18)
-                .addComponent(btnExit)
-                .addContainerGap(103, Short.MAX_VALUE))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/images/background/startBackground.jpeg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        jLabel2.setMaximumSize(new java.awt.Dimension(800, 600));
+        jLabel2.setMinimumSize(new java.awt.Dimension(800, 600));
+        jLabel2.setPreferredSize(new java.awt.Dimension(800, 600));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewActionPerformed
@@ -128,55 +119,9 @@ public class menuPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Player belum diset. Silakan login terlebih dahulu.", "Inventory", JOptionPane.INFORMATION_MESSAGE);
             return;
         }
-        java.util.List<Object> inv = p.getInventory();
-        if (inv.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Inventory kosong.", "Inventory", JOptionPane.INFORMATION_MESSAGE);
-            return;
-        }
-
-        String[] items = new String[inv.size()];
-        for (int i = 0; i < inv.size(); i++) {
-            Object it = inv.get(i);
-            String label;
-            if (it instanceof model.Weapon) {
-                model.Weapon w = (model.Weapon) it;
-                label = "Weapon: " + w.getName() + " (+" + w.getAttack() + " atk)";
-                if (it.equals(p.getEquippedWeapon())) label += "  [EQUIPPED]";
-            } else if (it instanceof model.Armor) {
-                model.Armor a = (model.Armor) it;
-                label = "Armor: " + a.getName() + " (+" + a.getDefense() + " HP)";
-                if (it.equals(p.getEquippedArmor())) label += "  [EQUIPPED]";
-            } else {
-                label = it.toString();
-            }
-            items[i] = label;
-        }
-
-        int choice = JOptionPane.showOptionDialog(this, "Pilih item:", "Inventory", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, items, items[0]);
-        if (choice < 0 || choice >= inv.size()) return;
-        Object selected = inv.get(choice);
-
-        String[] actions = new String[]{"Equip/Unequip", "Drop", "Batal"};
-        int act = JOptionPane.showOptionDialog(this, "Pilih aksi:", "Item Action", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, actions, actions[0]);
-        if (act == 0) {
-            // Equip or Unequip
-            if (selected instanceof model.Weapon || selected instanceof model.Armor) {
-                if ((selected instanceof model.Weapon && selected.equals(p.getEquippedWeapon())) ||
-                        (selected instanceof model.Armor && selected.equals(p.getEquippedArmor()))) {
-                    p.unequipItem(selected);
-                    JOptionPane.showMessageDialog(this, "Item telah dilepas dari equip.");
-                } else {
-                    p.equipItem(selected);
-                    JOptionPane.showMessageDialog(this, "Item telah dipasang sebagai equipment.");
-                }
-            } else {
-                JOptionPane.showMessageDialog(this, "Item ini tidak dapat di-equip.");
-            }
-        } else if (act == 1) {
-            // Drop
-            boolean removed = p.removeItem(selected);
-            if (removed) JOptionPane.showMessageDialog(this, "Item dibuang dari inventory.");
-            else JOptionPane.showMessageDialog(this, "Gagal membuang item.");
+        // Open the dedicated InventoryPanel for better inventory management
+        if (mainFrame != null) {
+            mainFrame.showPanel(new InventoryPanel(mainFrame));
         }
     }//GEN-LAST:event_btnInventoryActionPerformed
 
@@ -190,6 +135,7 @@ public class menuPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnInventory;
     private javax.swing.JButton btnNew;
     private javax.swing.JButton btnOption;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

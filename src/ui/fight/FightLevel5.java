@@ -12,7 +12,6 @@ import logic.DropItemAfterDefeatMonster;
 import java.util.Random;
 import model.Player;
 import model.Monster;
-import ui.dialog.FightDialog;
 
 public class FightLevel5 extends javax.swing.JPanel {
 

@@ -136,7 +136,7 @@ public class mapLevel3 extends javax.swing.JPanel {
             }
 
             // create first-stage monster (Keroco) for fight
-            Monster fightMonster = new Monster("Keroco", 30, 6, 2);
+            Monster fightMonster = new Monster("Troller", 50, 6, 2);
             ui.fight.FightLevel3 fightPanel = new ui.fight.FightLevel3(this.mainFrame, this.player, fightMonster);
             this.mainFrame.showPanel(fightPanel);
         } catch (Exception ex) {
