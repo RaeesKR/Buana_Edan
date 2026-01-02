@@ -126,11 +126,9 @@ public class Player {
             addMaxHp(-equippedArmor.getDefense());
         }
         equippedArmor = a;
-        // armor now increases max HP (defense field repurposed as HP bonus)
         addMaxHp(a.getDefense());
     }
 
-    // Public helpers for manual equip/unequip and item removal
     public boolean equipItem(Object item) {
         if (item == null) return false;
         if (!inventory.contains(item)) return false;
@@ -160,7 +158,6 @@ public class Player {
 
     public boolean removeItem(Object item) {
         if (item == null) return false;
-        // if it's equipped, unequip first
         if (item.equals(equippedWeapon)) {
             unequipItem(item);
         }

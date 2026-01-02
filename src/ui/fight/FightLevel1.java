@@ -145,7 +145,6 @@ public class FightLevel1 extends javax.swing.JPanel {
 
     private void applyDamageToPlayer(int dmg) {
         if (dmg <= 0) return;
-        // directly apply damage to HP (armor no longer reduces damage)
         if (dmg > 0) {
             player.takeDamage(dmg);
         }
@@ -177,20 +176,16 @@ public class FightLevel1 extends javax.swing.JPanel {
         } else if (!attack && monsterAttack) {
             applyDamageToPlayer(monster.getAttack() / 2);
         } else {
-            // both defend; nothing happens
         }
 
         if (!player.isAlive() || !monster.isAlive()) {
             finished = true;
-            // If player won, handle drops and stage transitions
             if (player.isAlive()) {
-                // Only restore HP when the entire fight finishes (after boss is defeated)
                 if (stage != 1) {
                     player.restoreFullHp();
                     updateHpLabels();
                 }
 
-                // give player drops and ask to choose one item to take
                 java.util.List<Object> drops = DropItemAfterDefeatMonster.dropItems(player);
                 if (drops != null && !drops.isEmpty()) {
                     String[] options = new String[drops.size()];
@@ -226,21 +221,18 @@ public class FightLevel1 extends javax.swing.JPanel {
                 }
 
                 if (stage == 1) {
-                    // first stage (Keroco) defeated -> spawn boss
                     stage = 2;
                     finished = false;
                     monster = new Monster("King Goblin", 120, 15, 8);
                     JOptionPane.showMessageDialog(this, "Goblin dikalahkan! King Goblin Muncul");
                     updateHpLabels();
                 } else {
-                    // second stage finished (boss defeated) -> return to map
                     if (mainFrame != null) {
                         mainFrame.showPanel(new ui.map.mapLevel1(mainFrame));
                     }
                 }
             }
             else {
-                // player lost
                 player.setMaxHp(100);
                 player.restoreFullHp();
                 updateHpLabels();
