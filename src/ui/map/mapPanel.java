@@ -36,70 +36,90 @@ public class mapPanel extends javax.swing.JPanel {
 
         btnLevel1 = new javax.swing.JButton();
         btnLevel2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        btnLevel3 = new javax.swing.JButton();
+        btnLevel4 = new javax.swing.JButton();
+        btnLevel5 = new javax.swing.JButton();
+        btnLevel6 = new javax.swing.JButton();
         btnback = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnLevel1.setText("Level 1");
+        btnLevel1.setBorderPainted(false);
+        btnLevel1.setContentAreaFilled(false);
+        btnLevel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLevel1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLevel1ActionPerformed(evt);
             }
         });
-        add(btnLevel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, -1, -1));
+        add(btnLevel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 238, 10, 10));
 
         btnLevel2.setText("Level 2");
+        btnLevel2.setBorderPainted(false);
+        btnLevel2.setContentAreaFilled(false);
+        btnLevel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLevel2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLevel2ActionPerformed(evt);
             }
         });
-        add(btnLevel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 370, -1, -1));
+        add(btnLevel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 313, 10, 10));
 
-        jButton3.setText("Level 3");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnLevel3.setText("Level 3");
+        btnLevel3.setBorderPainted(false);
+        btnLevel3.setContentAreaFilled(false);
+        btnLevel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLevel3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnLevel3ActionPerformed(evt);
             }
         });
-        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, -1, -1));
+        add(btnLevel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(287, 244, 10, 10));
 
-        jButton4.setText("Level 4");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btnLevel4.setText("Level 4");
+        btnLevel4.setBorderPainted(false);
+        btnLevel4.setContentAreaFilled(false);
+        btnLevel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLevel4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btnLevel4ActionPerformed(evt);
             }
         });
-        add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 400, -1, -1));
+        add(btnLevel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(352, 336, 10, 10));
 
-        jButton5.setText("Level 5");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        btnLevel5.setText("Level 5");
+        btnLevel5.setBorderPainted(false);
+        btnLevel5.setContentAreaFilled(false);
+        btnLevel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLevel5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                btnLevel5ActionPerformed(evt);
             }
         });
-        add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 250, -1, -1));
+        add(btnLevel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(405, 258, 10, 10));
 
-        jButton6.setText("Level 6");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        btnLevel6.setText("Level 6");
+        btnLevel6.setBorderPainted(false);
+        btnLevel6.setContentAreaFilled(false);
+        btnLevel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLevel6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                btnLevel6ActionPerformed(evt);
             }
         });
-        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 250, -1, -1));
+        add(btnLevel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(536, 266, 10, 10));
 
-        btnback.setText("Back");
+        btnback.setBorderPainted(false);
+        btnback.setContentAreaFilled(false);
+        btnback.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnbackActionPerformed(evt);
             }
         });
-        add(btnback, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        add(btnback, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 11, 41, 15));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/images/background/MAP.png"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -115,40 +135,40 @@ public class mapPanel extends javax.swing.JPanel {
         mainFrame.showPanel(new mapLevel2(mainFrame));
     }//GEN-LAST:event_btnLevel2ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void btnLevel5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLevel5ActionPerformed
         // TODO add your handling code here:
         mainFrame.showPanel(new mapLevel5(mainFrame));
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_btnLevel5ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnLevel3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLevel3ActionPerformed
         // TODO add your handling code here:
         mainFrame.showPanel(new mapLevel3(mainFrame));
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnLevel3ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void btnLevel4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLevel4ActionPerformed
         // TODO add your handling code here:
         mainFrame.showPanel(new mapLevel4(mainFrame));
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_btnLevel4ActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void btnLevel6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLevel6ActionPerformed
         // TODO add your handling code here:
         mainFrame.showPanel(new mapLevel6(mainFrame));
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_btnLevel6ActionPerformed
 
     private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
         // TODO add your handling code here:
-        mainFrame.showPanel(new storyPanel(mainFrame));
+        mainFrame.showPanel(new menuContinuePanel(mainFrame));
     }//GEN-LAST:event_btnbackActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLevel1;
     private javax.swing.JButton btnLevel2;
+    private javax.swing.JButton btnLevel3;
+    private javax.swing.JButton btnLevel4;
+    private javax.swing.JButton btnLevel5;
+    private javax.swing.JButton btnLevel6;
     private javax.swing.JButton btnback;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

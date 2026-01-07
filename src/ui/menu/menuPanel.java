@@ -13,6 +13,7 @@ import javax.swing.*;
 import java.awt.event.*;
 import model.Player;
 import ui.map.mapPanel;
+import ui.story.*;
 
 public class menuPanel extends javax.swing.JPanel {
 
@@ -38,6 +39,7 @@ public class menuPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnCredit = new javax.swing.JButton();
         btnNew = new javax.swing.JButton();
         btnOption = new javax.swing.JButton();
         btnInventory = new javax.swing.JButton();
@@ -46,64 +48,127 @@ public class menuPanel extends javax.swing.JPanel {
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnCredit.setFont(new java.awt.Font("Mistral", 1, 36)); // NOI18N
+        btnCredit.setBorderPainted(false);
+        btnCredit.setContentAreaFilled(false);
+        btnCredit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCredit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnCreditMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnCreditMouseExited(evt);
+            }
+        });
+        btnCredit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreditActionPerformed(evt);
+            }
+        });
+        add(btnCredit, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 561, 25, 25));
+
         btnNew.setFont(new java.awt.Font("Mistral", 1, 36)); // NOI18N
-        btnNew.setBorder(null);
+        btnNew.setBorder(javax.swing.BorderFactory.createMatteBorder(
+            0, 1, 0, 1,
+            new java.awt.Color(230,230,230)
+        ));
         btnNew.setBorderPainted(false);
         btnNew.setContentAreaFilled(false);
         btnNew.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnNew.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnNewMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnNewMouseExited(evt);
+            }
+        });
         btnNew.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNewActionPerformed(evt);
             }
         });
-        add(btnNew, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 370, 100, 50));
+        add(btnNew, new org.netbeans.lib.awtextra.AbsoluteConstraints(361, 350, 78, 15));
 
         btnOption.setFont(new java.awt.Font("Mistral", 1, 36)); // NOI18N
-        btnOption.setBorder(null);
+        btnOption.setBorder(javax.swing.BorderFactory.createMatteBorder(
+            0, 1, 0, 1,
+            new java.awt.Color(230,230,230)
+        ));
         btnOption.setBorderPainted(false);
         btnOption.setContentAreaFilled(false);
         btnOption.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnOption.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnOptionMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnOptionMouseExited(evt);
+            }
+        });
         btnOption.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOptionActionPerformed(evt);
             }
         });
-        add(btnOption, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 420, 80, 40));
+        add(btnOption, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 381, 60, 15));
 
         btnInventory.setBackground(new java.awt.Color(0,0,0,0));
-        btnInventory.setBorder(null);
+        btnInventory.setBorder(javax.swing.BorderFactory.createMatteBorder(
+            0, 1, 0, 1,
+            new java.awt.Color(230,230,230)
+        ));
         btnInventory.setBorderPainted(false);
         btnInventory.setContentAreaFilled(false);
         btnInventory.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnInventory.setMaximumSize(new java.awt.Dimension(72, 10));
+        btnInventory.setMinimumSize(new java.awt.Dimension(72, 10));
+        btnInventory.setPreferredSize(new java.awt.Dimension(72, 10));
+        btnInventory.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnInventoryMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnInventoryMouseExited(evt);
+            }
+        });
         btnInventory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnInventoryActionPerformed(evt);
             }
         });
-        add(btnInventory, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 470, 100, 40));
+        add(btnInventory, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 410, 80, 15));
 
         btnExit.setFont(new java.awt.Font("Mistral", 1, 36)); // NOI18N
-        btnExit.setBorder(null);
+        btnExit.setBorder(javax.swing.BorderFactory.createMatteBorder(
+            0, 1, 0, 1,
+            new java.awt.Color(230,230,230)
+        ));
         btnExit.setBorderPainted(false);
         btnExit.setContentAreaFilled(false);
         btnExit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnExit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnExitMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnExitMouseExited(evt);
+            }
+        });
         btnExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExitActionPerformed(evt);
             }
         });
-        add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 520, 100, 40));
+        add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(379, 438, 40, 15));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/images/background/UI MENU EXIT.png"))); // NOI18N
-        jLabel2.setMaximumSize(new java.awt.Dimension(800, 600));
-        jLabel2.setMinimumSize(new java.awt.Dimension(800, 600));
-        jLabel2.setPreferredSize(new java.awt.Dimension(800, 600));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/images/background/UI.png"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 600));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewActionPerformed
         // TODO add your handling code here:
-        mainFrame.showPanel(new storyPanel(mainFrame));
+        mainFrame.showPanel(new Scene1(mainFrame));
     }//GEN-LAST:event_btnNewActionPerformed
 
     private void btnOptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOptionActionPerformed
@@ -124,10 +189,65 @@ public class menuPanel extends javax.swing.JPanel {
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
         // TODO add your handling code here:
+        System.exit(0);
     }//GEN-LAST:event_btnExitActionPerformed
+
+    private void btnNewMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNewMouseEntered
+        // TODO add your handling code here:
+        btnNew.setBorderPainted(true);
+    }//GEN-LAST:event_btnNewMouseEntered
+
+    private void btnOptionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOptionMouseEntered
+        // TODO add your handling code here:
+        btnOption.setBorderPainted(true);
+    }//GEN-LAST:event_btnOptionMouseEntered
+
+    private void btnInventoryMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInventoryMouseEntered
+        // TODO add your handling code here:
+        btnInventory.setBorderPainted(true);
+    }//GEN-LAST:event_btnInventoryMouseEntered
+
+    private void btnExitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnExitMouseEntered
+        // TODO add your handling code here:
+        btnExit.setBorderPainted(true);
+    }//GEN-LAST:event_btnExitMouseEntered
+
+    private void btnNewMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNewMouseExited
+        // TODO add your handling code here:
+        btnNew.setBorderPainted(false);
+    }//GEN-LAST:event_btnNewMouseExited
+
+    private void btnOptionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOptionMouseExited
+        // TODO add your handling code here:
+        btnOption.setBorderPainted(false);
+    }//GEN-LAST:event_btnOptionMouseExited
+
+    private void btnInventoryMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInventoryMouseExited
+        // TODO add your handling code here:
+        btnInventory.setBorderPainted(false);
+    }//GEN-LAST:event_btnInventoryMouseExited
+
+    private void btnExitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnExitMouseExited
+        // TODO add your handling code here:
+        btnExit.setBorderPainted(false);
+    }//GEN-LAST:event_btnExitMouseExited
+
+    private void btnCreditMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCreditMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCreditMouseEntered
+
+    private void btnCreditMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCreditMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCreditMouseExited
+
+    private void btnCreditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreditActionPerformed
+        // TODO add your handling code here:
+        mainFrame.showPanel(new creditPanel(mainFrame));
+    }//GEN-LAST:event_btnCreditActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCredit;
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnInventory;
     private javax.swing.JButton btnNew;

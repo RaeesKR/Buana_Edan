@@ -14,6 +14,7 @@ public class registerPage extends javax.swing.JPanel {
     /**
      * Creates new form registerPage
      */
+    
     private mainFrame mainFrame;
     public registerPage(mainFrame mainFrame) {
         initComponents();
@@ -29,6 +30,7 @@ public class registerPage extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnback = new javax.swing.JButton();
         txtUser = new javax.swing.JTextField();
         txtPswd = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -39,6 +41,16 @@ public class registerPage extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnback.setBorderPainted(false);
+        btnback.setContentAreaFilled(false);
+        btnback.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnback.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnbackActionPerformed(evt);
+            }
+        });
+        add(btnback, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 11, 41, 15));
 
         txtUser.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         txtUser.addActionListener(new java.awt.event.ActionListener() {
@@ -83,7 +95,7 @@ public class registerPage extends javax.swing.JPanel {
         btnRegis.setText("Register");
         add(btnRegis, new org.netbeans.lib.awtextra.AbsoluteConstraints(354, 369, 98, 36));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/images/background/UI BACKGROUND.jpg"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/images/background/TEMPLATE.png"))); // NOI18N
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
@@ -99,9 +111,15 @@ public class registerPage extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPswd1ActionPerformed
 
+    private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
+        // TODO add your handling code here:
+        mainFrame.showPanel(new loginPage(mainFrame));
+    }//GEN-LAST:event_btnbackActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnRegis;
+    private javax.swing.JButton btnback;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

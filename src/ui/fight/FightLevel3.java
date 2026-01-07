@@ -47,11 +47,16 @@ public class FightLevel3 extends javax.swing.JPanel {
         btnAttck = new javax.swing.JButton();
         btnDeff = new javax.swing.JButton();
         PlayerHP = new javax.swing.JLabel();
-        PlayerArmor = new javax.swing.JLabel();
         PlayerHP1 = new javax.swing.JLabel();
+        PlayerArmor = new javax.swing.JLabel();
+        bgKroco = new javax.swing.JLabel();
+        bgBos = new javax.swing.JLabel();
 
-        btnAttck.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/images/iconbutton/AttackButton.png"))); // NOI18N
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         btnAttck.setBorder(javax.swing.BorderFactory.createTitledBorder("ATTACK"));
+        btnAttck.setBorderPainted(false);
+        btnAttck.setContentAreaFilled(false);
         btnAttck.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAttck.setPreferredSize(new java.awt.Dimension(120, 40));
         btnAttck.addActionListener(new java.awt.event.ActionListener() {
@@ -59,54 +64,33 @@ public class FightLevel3 extends javax.swing.JPanel {
                 btnAttckActionPerformed(evt);
             }
         });
+        add(btnAttck, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 480, 110, 100));
 
-        btnDeff.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/images/iconbutton/DeffenseButton.png"))); // NOI18N
         btnDeff.setBorder(javax.swing.BorderFactory.createTitledBorder("DEFFENSE"));
+        btnDeff.setBorderPainted(false);
+        btnDeff.setContentAreaFilled(false);
         btnDeff.setPreferredSize(new java.awt.Dimension(120, 40));
         btnDeff.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeffActionPerformed(evt);
             }
         });
+        add(btnDeff, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 450, 80, 80));
 
         PlayerHP.setText("HP Kamu : ");
-        PlayerArmor.setText("Armor : ");
+        add(PlayerHP, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 6, -1, -1));
 
         PlayerHP1.setText("Monster HP :");
+        add(PlayerHP1, new org.netbeans.lib.awtextra.AbsoluteConstraints(606, 6, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(191, 191, 191)
-                .addComponent(btnAttck, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(150, 150, 150)
-                .addComponent(btnDeff, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(178, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(PlayerHP)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PlayerArmor)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(PlayerHP1)
-                .addGap(84, 84, 84))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(PlayerHP)
-                    .addComponent(PlayerArmor)
-                    .addComponent(PlayerHP1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 294, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAttck, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnDeff, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(148, 148, 148))
-        );
+        PlayerArmor.setText("Armor :");
+        add(PlayerArmor, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 28, -1, -1));
+
+        bgKroco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/images/fightbg/LEVEL 3 KROCO 1.png"))); // NOI18N
+        add(bgKroco, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        bgBos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/images/fightbg/LEVEL 3(1).png"))); // NOI18N
+        add(bgBos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnDeffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeffActionPerformed
@@ -117,16 +101,32 @@ public class FightLevel3 extends javax.swing.JPanel {
 
         if (finished) {
             if (mainFrame != null) {
-                mainFrame.showPanel(new ui.map.mapLevel3(mainFrame));
+                mainFrame.showPanel(new ui.map.mapPanel(mainFrame));
             }
         }
     }//GEN-LAST:event_btnDeffActionPerformed
 
+    private void btnAttckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAttckActionPerformed
+        // TODO add your handling code here:
+                if (player == null || monster == null) return;
+
+        performPlayerAction(true);
+        updateHpLabels();
+
+        if (finished) {
+            if (mainFrame != null) {
+                mainFrame.showPanel(new ui.map.mapPanel(mainFrame));
+            }
+        }
+    }//GEN-LAST:event_btnAttckActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel PlayerHP;
     private javax.swing.JLabel PlayerArmor;
+    private javax.swing.JLabel PlayerHP;
     private javax.swing.JLabel PlayerHP1;
+    private javax.swing.JLabel bgBos;
+    private javax.swing.JLabel bgKroco;
     private javax.swing.JButton btnAttck;
     private javax.swing.JButton btnDeff;
     // End of variables declaration//GEN-END:variables
@@ -151,19 +151,6 @@ public class FightLevel3 extends javax.swing.JPanel {
                 PlayerArmor.revalidate(); PlayerArmor.repaint();
                 PlayerHP1.revalidate(); PlayerHP1.repaint();
             });
-        }
-    }
-
-    private void btnAttckActionPerformed(java.awt.event.ActionEvent evt) {
-        if (player == null || monster == null) return;
-
-        performPlayerAction(true);
-        updateHpLabels();
-
-        if (finished) {
-            if (mainFrame != null) {
-                mainFrame.showPanel(new ui.map.mapLevel1(mainFrame));
-            }
         }
     }
 
@@ -232,6 +219,8 @@ public class FightLevel3 extends javax.swing.JPanel {
                     monster = new Monster("The Troll", 160, 20, 12);
                     JOptionPane.showMessageDialog(this, "Troller dikalahkan! The Troll muncul!");
                     updateHpLabels();
+                    bgBos.setVisible(true);
+                    bgKroco.setVisible(false);
                 } else {
                     if (mainFrame != null) {
                         mainFrame.showPanel(new ui.map.mapLevel3(mainFrame));

@@ -45,6 +45,9 @@ public class mapLevel5 extends javax.swing.JPanel {
 
         btnback = new javax.swing.JButton();
         btnFightt = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnback.setText("Back");
         btnback.addActionListener(new java.awt.event.ActionListener() {
@@ -52,6 +55,7 @@ public class mapLevel5 extends javax.swing.JPanel {
                 btnbackActionPerformed(evt);
             }
         });
+        add(btnback, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 16, -1, -1));
 
         btnFightt.setText("Fight!");
         btnFightt.addActionListener(new java.awt.event.ActionListener() {
@@ -59,31 +63,10 @@ public class mapLevel5 extends javax.swing.JPanel {
                 btnFighttActionPerformed(evt);
             }
         });
+        add(btnFightt, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 485, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(btnback))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(315, 315, 315)
-                        .addComponent(btnFightt)))
-                .addContainerGap(369, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnback))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 381, Short.MAX_VALUE)
-                .addComponent(btnFightt)
-                .addGap(92, 92, 92))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/images/fightbg/LEVEL 5.png"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
@@ -130,5 +113,6 @@ public class mapLevel5 extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnFightt;
     private javax.swing.JButton btnback;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

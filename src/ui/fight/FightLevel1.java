@@ -45,14 +45,21 @@ public class FightLevel1 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        PlayerHPBar = new javax.swing.JProgressBar();
         btnAttck = new javax.swing.JButton();
         btnDeff = new javax.swing.JButton();
         PlayerHP = new javax.swing.JLabel();
-        PlayerArmor = new javax.swing.JLabel();
         PlayerHP1 = new javax.swing.JLabel();
+        bg = new javax.swing.JLabel();
+        PlayerArmor = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
-        btnAttck.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/images/iconbutton/AttackButton.png"))); // NOI18N
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        add(PlayerHPBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, -1, 20));
+
         btnAttck.setBorder(javax.swing.BorderFactory.createTitledBorder("ATTACK"));
+        btnAttck.setBorderPainted(false);
+        btnAttck.setContentAreaFilled(false);
         btnAttck.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAttck.setPreferredSize(new java.awt.Dimension(120, 40));
         btnAttck.addActionListener(new java.awt.event.ActionListener() {
@@ -60,54 +67,35 @@ public class FightLevel1 extends javax.swing.JPanel {
                 btnAttckActionPerformed(evt);
             }
         });
+        add(btnAttck, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 470, 110, 110));
 
-        btnDeff.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/images/iconbutton/DeffenseButton.png"))); // NOI18N
         btnDeff.setBorder(javax.swing.BorderFactory.createTitledBorder("DEFFENSE"));
+        btnDeff.setBorderPainted(false);
+        btnDeff.setContentAreaFilled(false);
+        btnDeff.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnDeff.setPreferredSize(new java.awt.Dimension(120, 40));
         btnDeff.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeffActionPerformed(evt);
             }
         });
+        add(btnDeff, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 450, 80, 80));
 
+        PlayerHP.setForeground(new java.awt.Color(255, 255, 255));
         PlayerHP.setText("HP Kamu : ");
-        PlayerArmor.setText("Armor: -");
+        add(PlayerHP, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 22, -1, -1));
 
+        PlayerHP1.setForeground(new java.awt.Color(255, 255, 255));
         PlayerHP1.setText("Monster HP :");
+        add(PlayerHP1, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 22, -1, -1));
+        add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(191, 191, 191)
-                .addComponent(btnAttck, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(150, 150, 150)
-                .addComponent(btnDeff, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(178, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(PlayerHP)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PlayerArmor)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(PlayerHP1)
-                .addGap(84, 84, 84))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(PlayerHP)
-                    .addComponent(PlayerArmor)
-                    .addComponent(PlayerHP1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 294, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAttck, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnDeff, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(148, 148, 148))
-        );
+        PlayerArmor.setForeground(new java.awt.Color(255, 255, 255));
+        PlayerArmor.setText("Armor : ");
+        add(PlayerArmor, new org.netbeans.lib.awtextra.AbsoluteConstraints(45, 40, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/images/fightbg/LEVEL 1Fight.png"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnDeffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeffActionPerformed
@@ -118,48 +106,64 @@ public class FightLevel1 extends javax.swing.JPanel {
 
         if (finished) {
             if (mainFrame != null) {
-                mainFrame.showPanel(new ui.map.mapLevel1(mainFrame));
+                mainFrame.showPanel(new ui.map.mapPanel(mainFrame));
             }
         }
     }//GEN-LAST:event_btnDeffActionPerformed
 
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel PlayerHP;
-    private javax.swing.JLabel PlayerArmor;
-    private javax.swing.JLabel PlayerHP1;
-    private javax.swing.JButton btnAttck;
-    private javax.swing.JButton btnDeff;
-    // End of variables declaration//GEN-END:variables
-
-    private void updateHpLabels() {
-        if (player != null) PlayerHP.setText("HP Kamu: " + player.getHp());
-        else PlayerHP.setText("HP Kamu: -");
-
-        if (player != null) PlayerArmor.setText("Armor: " + (player.getEquippedArmor() != null ? player.getEquippedArmor().getName() : "-"));
-        else PlayerArmor.setText("Armor: -");
-
-        if (monster != null) PlayerHP1.setText("HP " + monster.getName() + ": " + monster.getHp());
-        else PlayerHP1.setText("HP Monster: -");
-    }
-
-    private void applyDamageToPlayer(int dmg) {
-        if (dmg <= 0) return;
-        if (dmg > 0) {
-            player.takeDamage(dmg);
-        }
-    }
-
-    private void btnAttckActionPerformed(java.awt.event.ActionEvent evt) {
-        if (player == null || monster == null) return;
+    private void btnAttckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAttckActionPerformed
+        // TODO add your handling code here:
+         if (player == null || monster == null) return;
 
         performPlayerAction(true);
         updateHpLabels();
 
         if (finished) {
             if (mainFrame != null) {
-                mainFrame.showPanel(new ui.map.mapLevel1(mainFrame));
+                mainFrame.showPanel(new ui.map.mapPanel(mainFrame));
             }
+        }
+    }//GEN-LAST:event_btnAttckActionPerformed
+
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel PlayerArmor;
+    private javax.swing.JLabel PlayerHP;
+    private javax.swing.JLabel PlayerHP1;
+    private javax.swing.JProgressBar PlayerHPBar;
+    private javax.swing.JLabel bg;
+    private javax.swing.JButton btnAttck;
+    private javax.swing.JButton btnDeff;
+    private javax.swing.JLabel jLabel1;
+    // End of variables declaration//GEN-END:variables
+
+    private void updateHpLabels() {
+        final String pText = (player != null) ? "HP Kamu: " + player.getHp() : "HP Kamu: -";
+        final String aText = (player != null) ? "Armor: " + (player.getEquippedArmor() != null ? player.getEquippedArmor().getName() : "-") : "Armor: -";
+        final String mText = (monster != null) ? "HP " + monster.getName() + ": " + monster.getHp() : "HP Monster: -";
+        if (javax.swing.SwingUtilities.isEventDispatchThread()) {
+            PlayerHP.setText(pText);
+            PlayerArmor.setText(aText);
+            PlayerHP1.setText(mText);
+            PlayerHP.revalidate(); PlayerHP.repaint();
+            PlayerArmor.revalidate(); PlayerArmor.repaint();
+            PlayerHP1.revalidate(); PlayerHP1.repaint();
+        } else {
+            javax.swing.SwingUtilities.invokeLater(() -> {
+                PlayerHP.setText(pText);
+                PlayerArmor.setText(aText);
+                PlayerHP1.setText(mText);
+                PlayerHP.revalidate(); PlayerHP.repaint();
+                PlayerArmor.revalidate(); PlayerArmor.repaint();
+                PlayerHP1.revalidate(); PlayerHP1.repaint();
+            });
+        }
+    }
+
+    private void applyDamageToPlayer(int dmg) {
+        if (dmg <= 0) return;
+        if (dmg > 0) {
+            player.takeDamage(dmg);
         }
     }
 
@@ -217,18 +221,6 @@ public class FightLevel1 extends javax.swing.JPanel {
                             JOptionPane.showMessageDialog(this, "Mendapatkan item! Masuk inventory.");
                         }
                         updateHpLabels();
-                    }
-                }
-
-                if (stage == 1) {
-                    stage = 2;
-                    finished = false;
-                    monster = new Monster("King Goblin", 120, 15, 8);
-                    JOptionPane.showMessageDialog(this, "Goblin dikalahkan! King Goblin Muncul");
-                    updateHpLabels();
-                } else {
-                    if (mainFrame != null) {
-                        mainFrame.showPanel(new ui.map.mapLevel1(mainFrame));
                     }
                 }
             }

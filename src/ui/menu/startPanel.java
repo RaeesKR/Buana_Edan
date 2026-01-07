@@ -45,23 +45,47 @@ public class startPanel extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnStart.setFont(new java.awt.Font("Mistral", 1, 54)); // NOI18N
-        btnStart.setBorderPainted(false);
-        btnStart.setContentAreaFilled(false);
-        btnStart.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnStartActionPerformed(evt);
-            }
-        });
-        add(btnStart, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 390, 150, 40));
+        btnStart.setBorder(javax.swing.BorderFactory.createMatteBorder(
+            0, 1, 0, 1,
+            new java.awt.Color(230,230,230)
+        )
+    );
+    btnStart.setBorderPainted(false);
+    btnStart.setContentAreaFilled(false);
+    btnStart.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+    btnStart.addMouseListener(new java.awt.event.MouseAdapter() {
+        public void mouseEntered(java.awt.event.MouseEvent evt) {
+            btnStartMouseEntered(evt);
+        }
+        public void mouseExited(java.awt.event.MouseEvent evt) {
+            btnStartMouseExited(evt);
+        }
+    });
+    btnStart.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            btnStartActionPerformed(evt);
+        }
+    });
+    add(btnStart, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 349, 100, 15));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/images/background/PUSH TO START.png"))); // NOI18N
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 800, 620));
+    jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/images/background/START.png"))); // NOI18N
+    add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 810, 620));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStartActionPerformed
         // TODO add your handling code here:
         mainFrame.showPanel(new loginPage(mainFrame));
     }//GEN-LAST:event_btnStartActionPerformed
+
+    private void btnStartMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnStartMouseEntered
+        // TODO add your handling code here:
+       btnStart.setBorderPainted(true);
+    }//GEN-LAST:event_btnStartMouseEntered
+
+    private void btnStartMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnStartMouseExited
+        // TODO add your handling code here:
+        btnStart.setBorderPainted(false);
+    }//GEN-LAST:event_btnStartMouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -288,8 +288,7 @@ public class Inventory extends javax.swing.JPanel {
 
         add(panelRight, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 520, 780, 70));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/images/background/UI BACKGROUND.jpg"))); // NOI18N
-        jLabel2.setText("jLabel2");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/images/background/UI.png"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
