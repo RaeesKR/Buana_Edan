@@ -8,7 +8,10 @@ package ui.auth;
  *
  * @author Dhenis
  */
+import controllers.AuthControllers;
+import javax.swing.JOptionPane;
 import main.mainFrame;
+import ui.menu.menuPanel;
 public class registerPage extends javax.swing.JPanel {
 
     /**
@@ -38,6 +41,7 @@ public class registerPage extends javax.swing.JPanel {
         txtPswd1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         btnRegis = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -93,7 +97,20 @@ public class registerPage extends javax.swing.JPanel {
 
         btnRegis.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
         btnRegis.setText("Register");
-        add(btnRegis, new org.netbeans.lib.awtextra.AbsoluteConstraints(354, 369, 98, 36));
+        btnRegis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegisActionPerformed(evt);
+            }
+        });
+        add(btnRegis, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 360, 98, 36));
+
+        jButton1.setText("Login");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 360, 98, 36));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/images/background/TEMPLATE.png"))); // NOI18N
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
