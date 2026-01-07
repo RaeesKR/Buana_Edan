@@ -45,7 +45,6 @@ public class FightLevel1 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        PlayerHPBar = new javax.swing.JProgressBar();
         btnAttck = new javax.swing.JButton();
         btnDeff = new javax.swing.JButton();
         PlayerHP = new javax.swing.JLabel();
@@ -55,7 +54,6 @@ public class FightLevel1 extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        add(PlayerHPBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, -1, 20));
 
         btnAttck.setBorder(javax.swing.BorderFactory.createTitledBorder("ATTACK"));
         btnAttck.setBorderPainted(false);
@@ -130,7 +128,6 @@ public class FightLevel1 extends javax.swing.JPanel {
     private javax.swing.JLabel PlayerArmor;
     private javax.swing.JLabel PlayerHP;
     private javax.swing.JLabel PlayerHP1;
-    private javax.swing.JProgressBar PlayerHPBar;
     private javax.swing.JLabel bg;
     private javax.swing.JButton btnAttck;
     private javax.swing.JButton btnDeff;
