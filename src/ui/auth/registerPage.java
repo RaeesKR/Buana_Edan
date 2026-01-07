@@ -33,7 +33,6 @@ public class registerPage extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnback = new javax.swing.JButton();
         txtUser = new javax.swing.JTextField();
         txtPswd = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -45,16 +44,6 @@ public class registerPage extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        btnback.setBorderPainted(false);
-        btnback.setContentAreaFilled(false);
-        btnback.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnback.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnbackActionPerformed(evt);
-            }
-        });
-        add(btnback, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 11, 41, 15));
 
         txtUser.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         txtUser.addActionListener(new java.awt.event.ActionListener() {
@@ -110,15 +99,7 @@ public class registerPage extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 360, 98, 36));
-
-        jButton1.setText("Login");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 360, 98, 36));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 98, 36));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/images/background/TEMPLATE.png"))); // NOI18N
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
