@@ -54,6 +54,9 @@ public class startPanel extends javax.swing.JPanel {
     btnStart.setContentAreaFilled(false);
     btnStart.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
     btnStart.addMouseListener(new java.awt.event.MouseAdapter() {
+        public void mouseClicked(java.awt.event.MouseEvent evt) {
+            btnStartMouseClicked(evt);
+        }
         public void mouseEntered(java.awt.event.MouseEvent evt) {
             btnStartMouseEntered(evt);
         }
@@ -74,18 +77,24 @@ public class startPanel extends javax.swing.JPanel {
 
     private void btnStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStartActionPerformed
         // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
         mainFrame.showPanel(new loginPage(mainFrame));
     }//GEN-LAST:event_btnStartActionPerformed
 
     private void btnStartMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnStartMouseEntered
         // TODO add your handling code here:
        btnStart.setBorderPainted(true);
+       mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\HOVER SFX.wav");
     }//GEN-LAST:event_btnStartMouseEntered
 
     private void btnStartMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnStartMouseExited
         // TODO add your handling code here:
         btnStart.setBorderPainted(false);
     }//GEN-LAST:event_btnStartMouseExited
+
+    private void btnStartMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnStartMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnStartMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -62,6 +62,14 @@ public class mapPanel extends javax.swing.JPanel {
         btnLevel1.setBorderPainted(false);
         btnLevel1.setContentAreaFilled(false);
         btnLevel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLevel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnLevel1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnLevel1MouseEntered(evt);
+            }
+        });
         btnLevel1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLevel1ActionPerformed(evt);
@@ -78,6 +86,14 @@ public class mapPanel extends javax.swing.JPanel {
         btnLevel2.setBorderPainted(false);
         btnLevel2.setContentAreaFilled(false);
         btnLevel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLevel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnLevel2MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnLevel2MouseEntered(evt);
+            }
+        });
         btnLevel2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLevel2ActionPerformed(evt);
@@ -94,6 +110,14 @@ public class mapPanel extends javax.swing.JPanel {
         btnLevel3.setBorderPainted(false);
         btnLevel3.setContentAreaFilled(false);
         btnLevel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLevel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnLevel3MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnLevel3MouseEntered(evt);
+            }
+        });
         btnLevel3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLevel3ActionPerformed(evt);
@@ -110,6 +134,14 @@ public class mapPanel extends javax.swing.JPanel {
         btnLevel4.setBorderPainted(false);
         btnLevel4.setContentAreaFilled(false);
         btnLevel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLevel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnLevel4MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnLevel4MouseEntered(evt);
+            }
+        });
         btnLevel4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLevel4ActionPerformed(evt);
@@ -126,6 +158,14 @@ public class mapPanel extends javax.swing.JPanel {
         btnLevel5.setBorderPainted(false);
         btnLevel5.setContentAreaFilled(false);
         btnLevel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLevel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnLevel5MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnLevel5MouseEntered(evt);
+            }
+        });
         btnLevel5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLevel5ActionPerformed(evt);
@@ -142,6 +182,14 @@ public class mapPanel extends javax.swing.JPanel {
         btnLevel6.setBorderPainted(false);
         btnLevel6.setContentAreaFilled(false);
         btnLevel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLevel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnLevel6MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnLevel6MouseEntered(evt);
+            }
+        });
         btnLevel6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLevel6ActionPerformed(evt);
@@ -152,6 +200,14 @@ public class mapPanel extends javax.swing.JPanel {
         btnback.setBorderPainted(false);
         btnback.setContentAreaFilled(false);
         btnback.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnback.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnbackMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnbackMouseEntered(evt);
+            }
+        });
         btnback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnbackActionPerformed(evt);
@@ -165,38 +221,115 @@ public class mapPanel extends javax.swing.JPanel {
 
     private void btnLevel1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLevel1ActionPerformed
         // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
         mainFrame.showPanel(new mapLevel1(mainFrame));
     }//GEN-LAST:event_btnLevel1ActionPerformed
 
     private void btnLevel2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLevel2ActionPerformed
         // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
         mainFrame.showPanel(new mapLevel2(mainFrame));
     }//GEN-LAST:event_btnLevel2ActionPerformed
 
     private void btnLevel5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLevel5ActionPerformed
         // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
         mainFrame.showPanel(new mapLevel5(mainFrame));
     }//GEN-LAST:event_btnLevel5ActionPerformed
 
     private void btnLevel3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLevel3ActionPerformed
         // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
         mainFrame.showPanel(new mapLevel3(mainFrame));
     }//GEN-LAST:event_btnLevel3ActionPerformed
 
     private void btnLevel4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLevel4ActionPerformed
         // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
         mainFrame.showPanel(new mapLevel4(mainFrame));
     }//GEN-LAST:event_btnLevel4ActionPerformed
 
     private void btnLevel6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLevel6ActionPerformed
         // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
         mainFrame.showPanel(new mapLevel6(mainFrame));
     }//GEN-LAST:event_btnLevel6ActionPerformed
 
     private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
         // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
         mainFrame.showPanel(new menuContinuePanel(mainFrame));
     }//GEN-LAST:event_btnbackActionPerformed
+
+    private void btnLevel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLevel1MouseEntered
+        // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\HOVER SFX.wav");
+    }//GEN-LAST:event_btnLevel1MouseEntered
+
+    private void btnLevel2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLevel2MouseEntered
+        // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\HOVER SFX.wav");
+    }//GEN-LAST:event_btnLevel2MouseEntered
+
+    private void btnLevel3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLevel3MouseEntered
+        // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\HOVER SFX.wav");
+    }//GEN-LAST:event_btnLevel3MouseEntered
+
+    private void btnLevel4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLevel4MouseEntered
+        // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\HOVER SFX.wav");
+    }//GEN-LAST:event_btnLevel4MouseEntered
+
+    private void btnLevel5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLevel5MouseEntered
+        // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\HOVER SFX.wav");
+    }//GEN-LAST:event_btnLevel5MouseEntered
+
+    private void btnLevel6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLevel6MouseEntered
+        // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\HOVER SFX.wav");
+    }//GEN-LAST:event_btnLevel6MouseEntered
+
+    private void btnbackMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnbackMouseEntered
+        // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\HOVER SFX.wav");
+    }//GEN-LAST:event_btnbackMouseEntered
+
+    private void btnLevel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLevel1MouseClicked
+        // TODO add your handling code here:
+        mainFrame.playMusic("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
+    }//GEN-LAST:event_btnLevel1MouseClicked
+
+    private void btnLevel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLevel2MouseClicked
+        // TODO add your handling code here:
+        mainFrame.playMusic("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
+    }//GEN-LAST:event_btnLevel2MouseClicked
+
+    private void btnLevel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLevel3MouseClicked
+        // TODO add your handling code here:
+        mainFrame.playMusic("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
+    }//GEN-LAST:event_btnLevel3MouseClicked
+
+    private void btnLevel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLevel4MouseClicked
+        // TODO add your handling code here:
+        mainFrame.playMusic("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
+    }//GEN-LAST:event_btnLevel4MouseClicked
+
+    private void btnLevel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLevel5MouseClicked
+        // TODO add your handling code here:
+        mainFrame.playMusic("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
+    }//GEN-LAST:event_btnLevel5MouseClicked
+
+    private void btnLevel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLevel6MouseClicked
+        // TODO add your handling code here:
+        mainFrame.playMusic("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
+    }//GEN-LAST:event_btnLevel6MouseClicked
+
+    private void btnbackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnbackMouseClicked
+        // TODO add your handling code here:
+        mainFrame.playMusic("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
+    }//GEN-LAST:event_btnbackMouseClicked
 
 
     private void updateLevelButtons() {

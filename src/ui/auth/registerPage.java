@@ -40,7 +40,7 @@ public class registerPage extends javax.swing.JPanel {
         txtPswd1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         btnRegis = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -86,6 +86,11 @@ public class registerPage extends javax.swing.JPanel {
 
         btnRegis.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
         btnRegis.setText("Register");
+        btnRegis.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnRegisMouseEntered(evt);
+            }
+        });
         btnRegis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegisActionPerformed(evt);
@@ -93,14 +98,19 @@ public class registerPage extends javax.swing.JPanel {
         });
         add(btnRegis, new org.netbeans.lib.awtextra.AbsoluteConstraints(353, 360, 98, 36));
 
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+        btnBack.setBorderPainted(false);
+        btnBack.setContentAreaFilled(false);
+        btnBack.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnBackMouseEntered(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 40, 20));
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 40, 20));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/images/background/TEMPLATE.png"))); // NOI18N
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -118,13 +128,15 @@ public class registerPage extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPswd1ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
         mainFrame.showPanel(new loginPage(mainFrame));
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnRegisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisActionPerformed
         // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
         
         String userName = txtUser.getText().trim();
         String pwd = txtPswd.getText().trim();
@@ -152,10 +164,20 @@ public class registerPage extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnRegisActionPerformed
 
+    private void btnBackMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBackMouseEntered
+        // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\HOVER SFX.wav");
+    }//GEN-LAST:event_btnBackMouseEntered
+
+    private void btnRegisMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRegisMouseEntered
+        // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\HOVER SFX.wav");
+    }//GEN-LAST:event_btnRegisMouseEntered
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBack;
     private javax.swing.JButton btnRegis;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

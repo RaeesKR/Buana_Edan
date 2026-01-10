@@ -78,20 +78,44 @@ public class mainFrame extends javax.swing.JFrame {
         // -10.0f = Suara lebih kecil
         // -20.0f = Suara jauh lebih kecil
         // -80.0f = Mute (senyap total)
-        volume.setValue(-40.0f); 
+        volume.setValue(-15.0f); 
             clip.start();
         } catch (Exception e) {
             e.printStackTrace();
         } 
     }
     
-    public static void stopMusic() {
+    public static void playSFX(String filepath) { 
+        try {
+            // Baris 64: Ubah menjadi 'p' kecil juga agar sama
+            
+            File file = new File(filepath); 
+
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
+            clip = AudioSystem.getClip();
+            clip.open(audioStream);
+            FloatControl volume = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
+        
+        // Atur nilai desibel (f di belakang angka berarti tipe data float)
+        // 0.0f  = Volume normal (bawaan file)
+        // -10.0f = Suara lebih kecil
+        // -20.0f = Suara jauh lebih kecil
+        // -80.0f = Mute (senyap total)
+        volume.setValue(-0.0f); 
+            clip.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } 
+    }
+    
+    public static void stopMusic(String filepath) {
     // Periksa apakah clip ada dan sedang berjalan
-    if (clip != null && clip.isRunning()) {
+    if (clip != null) {
         clip.stop();          // Menghentikan suara
         clip.setFramePosition(0); // Mengembalikan durasi ke awal (opsional)
         clip.close();         // Membebaskan memori RAM
     }
+    
 }
             
     
@@ -149,8 +173,9 @@ public class mainFrame extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
-        String musicIdle = "C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\MUSIC IDLE.wav";
-         playMusic(musicIdle);
+        //String musicIdle = "C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\MUSIC IDLE.wav";
+      
+        playMusic("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\MUSIC IDLE.wav");
         /* Create and display the form */
         SwingUtilities.invokeLater(() -> new mainFrame());
         java.awt.EventQueue.invokeLater(new Runnable() {

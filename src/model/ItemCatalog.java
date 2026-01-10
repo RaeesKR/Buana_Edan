@@ -15,28 +15,28 @@ public class ItemCatalog {
 
     static {
         weapons = new ArrayList<>(Arrays.asList(
-            new Weapon("Attaque Java", 2,"/resource/images/weapon/Attaque Java.png"),
-            new Weapon("Angriff", 4,"/resource/images/weapon/Angriff.png"),
-            new Weapon("Qin Shin Huang", 6,"/resource/images/weapon/Qin Shin Huang.png"),
-            new Weapon("Raphael", 10,"/resource/images/weapon/Raphael.png"),
-            new Weapon("Field Bonds", 13,"/resource/images/weapon/Field Bonds.png"),
-            new Weapon("Schwert Des Ruhms", 17,"/resource/images/weapon/Schwert Des Ruhms.png"),
-            new Weapon("Susanoo", 23,"/resource/images/weapon/Susanoo.png"),
-            new Weapon("Mythril", 29,"/resource/images/weapon/Mythril.png"),
-            new Weapon("Reaper", 35,"/resource/images/weapon/Reaper.png"),
-            new Weapon("Lost of Bali", 50,"/resource/images/weapon/Lost of Bali.png")
+            new Weapon("Attaque Java", 5,"/resource/images/weapon/Attaque Java.png"),
+            new Weapon("Angriff", 9,"/resource/images/weapon/Angriff.png"),
+            new Weapon("Qin Shin Huang", 15,"/resource/images/weapon/Qin Shin Huang.png"),
+            new Weapon("Raphael", 19,"/resource/images/weapon/Raphael.png"),
+            new Weapon("Field Bonds", 21,"/resource/images/weapon/Field Bonds.png"),
+            new Weapon("Schwert Des Ruhms", 25,"/resource/images/weapon/Schwert Des Ruhms.png"),
+            new Weapon("Susanoo", 28,"/resource/images/weapon/Susanoo.png"),
+            new Weapon("Mythril", 30,"/resource/images/weapon/Mythril.png"),
+            new Weapon("Reaper", 32,"/resource/images/weapon/Reaper.png"),
+            new Weapon("Lost of Bali", 35,"/resource/images/weapon/Lost of Bali.png")
 
         ));
 
         armors = new ArrayList<>(Arrays.asList(
-            new Armor("Champion", 3, "/resource/images/armor/Champion.png"),
-            new Armor("Briar", 6, "/resource/images/armor/Briar.png"),
-            new Armor("Aristocrat", 10, "/resource/images/armor/Aristocrat.png"),
-            new Armor("Banished Knight", 14, "/resource/images/armor/Banished Knight.png"),
-            new Armor("Bloodhound", 18, "/resource/images/armor/Bloodhound.png"),
-            new Armor("Elden Lord", 23, "/resource/images/armor/Elden Lord.png"),
-            new Armor("Blackflame", 29, "/resource/images/armor/Blackflame.png"),
-            new Armor("Consort's", 45, "/resource/images/armor/Consort_s.png")
+            new Armor("Champion", 6, "/resource/images/armor/Champion.png"),
+            new Armor("Briar", 10, "/resource/images/armor/Briar.png"),
+            new Armor("Aristocrat", 13, "/resource/images/armor/Aristocrat.png"),
+            new Armor("Banished Knight", 18, "/resource/images/armor/Banished Knight.png"),
+            new Armor("Bloodhound", 21, "/resource/images/armor/Bloodhound.png"),
+            new Armor("Elden Lord", 24, "/resource/images/armor/Elden Lord.png"),
+            new Armor("Blackflame", 26, "/resource/images/armor/Blackflame.png"),
+            new Armor("Consort's", 33, "/resource/images/armor/Consort_s.png")
         ));
     }
 

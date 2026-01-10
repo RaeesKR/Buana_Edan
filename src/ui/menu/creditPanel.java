@@ -34,11 +34,20 @@ public class creditPanel extends javax.swing.JPanel {
         btnback = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
+        setMaximumSize(new java.awt.Dimension(800, 600));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnback.setBorderPainted(false);
         btnback.setContentAreaFilled(false);
         btnback.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnback.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnbackMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnbackMouseEntered(evt);
+            }
+        });
         btnback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnbackActionPerformed(evt);
@@ -52,8 +61,18 @@ public class creditPanel extends javax.swing.JPanel {
 
     private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
         // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
         mainFrame.showPanel(new menuPanel(mainFrame));
     }//GEN-LAST:event_btnbackActionPerformed
+
+    private void btnbackMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnbackMouseEntered
+        // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\HOVER SFX.wav");
+    }//GEN-LAST:event_btnbackMouseEntered
+
+    private void btnbackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnbackMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnbackMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

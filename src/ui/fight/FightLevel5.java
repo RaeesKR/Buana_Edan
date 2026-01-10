@@ -74,6 +74,11 @@ public class FightLevel5 extends javax.swing.JPanel {
         btnAttck.setContentAreaFilled(false);
         btnAttck.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAttck.setPreferredSize(new java.awt.Dimension(120, 40));
+        btnAttck.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAttckMouseClicked(evt);
+            }
+        });
         btnAttck.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAttckActionPerformed(evt);
@@ -85,6 +90,11 @@ public class FightLevel5 extends javax.swing.JPanel {
         btnDeff.setBorderPainted(false);
         btnDeff.setContentAreaFilled(false);
         btnDeff.setPreferredSize(new java.awt.Dimension(120, 40));
+        btnDeff.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnDeffMouseClicked(evt);
+            }
+        });
         btnDeff.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeffActionPerformed(evt);
@@ -125,6 +135,16 @@ public class FightLevel5 extends javax.swing.JPanel {
             }
         }
     }//GEN-LAST:event_btnAttckActionPerformed
+
+    private void btnAttckMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAttckMouseClicked
+        // TODO add your handling code here:
+        mainFrame.playMusic("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
+    }//GEN-LAST:event_btnAttckMouseClicked
+
+    private void btnDeffMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDeffMouseClicked
+        // TODO add your handling code here:
+        mainFrame.playMusic("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
+    }//GEN-LAST:event_btnDeffMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -222,8 +242,8 @@ public class FightLevel5 extends javax.swing.JPanel {
                 if (stage == 1) {
                     stage = 2;
                     finished = false;
-                    monster = new Monster("Boss Level 5", 200, 24, 16);
-                    JOptionPane.showMessageDialog(this, "Keroco dikalahkan! Boss muncul!");
+                    monster = new Monster("Valerius the Darkbound", 250, 28, 16);
+                    JOptionPane.showMessageDialog(this, "Gorgonath juga kau kalahkan? Tak akan kubiarkan kau lebih jauh!!!");
                     updateHpLabels();
                     bgKroco.setVisible(false);
                     bgBos.setVisible(true);
@@ -244,7 +264,7 @@ public class FightLevel5 extends javax.swing.JPanel {
                 }
                 player.restoreFullHp();
                 updateHpLabels();
-                JOptionPane.showMessageDialog(this, "Kamu kalah. HP direset menjadi 100.", "Kalah", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Kamu kalah", "Kalah", JOptionPane.INFORMATION_MESSAGE);
             }
         }
     }

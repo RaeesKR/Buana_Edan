@@ -12,6 +12,7 @@ import main.mainFrame;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import static main.mainFrame.playMusic;
 import model.Player;
 import model.Monster;
 import ui.menu.*;
@@ -43,6 +44,8 @@ public class mapLevel1 extends javax.swing.JPanel {
     private void initComponents() {
 
         btnInventory = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        Tas = new javax.swing.JLabel();
         btnback = new javax.swing.JButton();
         btnFightt = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -62,6 +65,9 @@ public class mapLevel1 extends javax.swing.JPanel {
         btnInventory.setMinimumSize(new java.awt.Dimension(72, 10));
         btnInventory.setPreferredSize(new java.awt.Dimension(72, 10));
         btnInventory.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnInventoryMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnInventoryMouseEntered(evt);
             }
@@ -74,10 +80,29 @@ public class mapLevel1 extends javax.swing.JPanel {
                 btnInventoryActionPerformed(evt);
             }
         });
-        add(btnInventory, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 460, 90, 90));
+        add(btnInventory, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, 140, 130));
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 280, -1, -1));
+
+        Tas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/images/background/—Pngtree—medieval magic backpack_7111733.png-rmbg.png-rmbg.png"))); // NOI18N
+        add(Tas, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 150, 130));
 
         btnback.setText("Back");
         btnback.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnback.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnbackMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnbackMouseEntered(evt);
+            }
+        });
         btnback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnbackActionPerformed(evt);
@@ -85,11 +110,15 @@ public class mapLevel1 extends javax.swing.JPanel {
         });
         add(btnback, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
-        btnFightt.setActionCommand("");
         btnFightt.setBorderPainted(false);
         btnFightt.setContentAreaFilled(false);
         btnFightt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnFightt.setFocusable(false);
+        btnFightt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnFighttMouseClicked(evt);
+            }
+        });
         btnFightt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFighttActionPerformed(evt);
@@ -109,12 +138,16 @@ public class mapLevel1 extends javax.swing.JPanel {
 
     private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
         // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
         mainFrame.showPanel(new mapPanel(mainFrame));
     }//GEN-LAST:event_btnbackActionPerformed
 
     private void btnFighttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFighttActionPerformed
         // TODO add your handling code here:
         // Ensure we have a player instance
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
+  
+        mainFrame.playMusic("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\FIGHT MUSIC.wav");
         if (this.player == null && this.mainFrame != null) {
             this.player = this.mainFrame.getPlayer();
         }
@@ -146,15 +179,15 @@ public class mapLevel1 extends javax.swing.JPanel {
 
     private void btnInventoryMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInventoryMouseEntered
         // TODO add your handling code here:
-        btnInventory.setBorderPainted(true);
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\HOVER SFX.wav");
     }//GEN-LAST:event_btnInventoryMouseEntered
 
     private void btnInventoryMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInventoryMouseExited
         // TODO add your handling code here:
-        btnInventory.setBorderPainted(false);
     }//GEN-LAST:event_btnInventoryMouseExited
 
     private void btnInventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInventoryActionPerformed
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
         Player p = (mainFrame != null) ? mainFrame.getPlayer() : null;
         if (p == null) {
             JOptionPane.showMessageDialog(this, "Player belum diset. Silakan login terlebih dahulu.", "Inventory", JOptionPane.INFORMATION_MESSAGE);
@@ -166,12 +199,39 @@ public class mapLevel1 extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnInventoryActionPerformed
 
+    private void btnbackMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnbackMouseEntered
+        // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\HOVER SFX.wav");
+    }//GEN-LAST:event_btnbackMouseEntered
+
+    private void btnInventoryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInventoryMouseClicked
+        // TODO add your handling code here:
+        mainFrame.playMusic("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
+    }//GEN-LAST:event_btnInventoryMouseClicked
+
+    private void btnbackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnbackMouseClicked
+        // TODO add your handling code here:
+        mainFrame.playMusic("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
+    }//GEN-LAST:event_btnbackMouseClicked
+
+    private void btnFighttMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFighttMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnFighttMouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        mainFrame.stopMusic("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\MUSIC IDLE.wav");
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Tas;
     private javax.swing.JButton btnFightt;
     private javax.swing.JButton btnInventory;
     private javax.swing.JButton btnback;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables

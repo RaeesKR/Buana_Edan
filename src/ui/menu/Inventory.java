@@ -240,10 +240,44 @@ public class Inventory extends javax.swing.JPanel {
         panelRight.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         btnEquip.setText("Equip / Unequip");
+        btnEquip.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnEquipMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnEquipMouseEntered(evt);
+            }
+        });
+        btnEquip.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEquipActionPerformed(evt);
+            }
+        });
 
         btnDrop.setText("Delete");
+        btnDrop.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnDropMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnDropMouseEntered(evt);
+            }
+        });
+        btnDrop.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDropActionPerformed(evt);
+            }
+        });
 
         btnBack.setText("Back");
+        btnBack.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnBackMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnBackMouseEntered(evt);
+            }
+        });
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
@@ -300,8 +334,46 @@ public class Inventory extends javax.swing.JPanel {
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
         
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void btnEquipMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEquipMouseEntered
+        // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\HOVER SFX.wav");
+    }//GEN-LAST:event_btnEquipMouseEntered
+
+    private void btnDropMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDropMouseEntered
+        // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\HOVER SFX.wav");
+    }//GEN-LAST:event_btnDropMouseEntered
+
+    private void btnBackMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBackMouseEntered
+        // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\HOVER SFX.wav");
+    }//GEN-LAST:event_btnBackMouseEntered
+
+    private void btnEquipMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEquipMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEquipMouseClicked
+
+    private void btnDropMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDropMouseClicked
+
+    }//GEN-LAST:event_btnDropMouseClicked
+
+    private void btnBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBackMouseClicked
+
+    }//GEN-LAST:event_btnBackMouseClicked
+
+    private void btnEquipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEquipActionPerformed
+        // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
+    }//GEN-LAST:event_btnEquipActionPerformed
+
+    private void btnDropActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDropActionPerformed
+        // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
+    }//GEN-LAST:event_btnDropActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

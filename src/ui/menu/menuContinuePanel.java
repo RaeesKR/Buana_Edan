@@ -52,6 +52,9 @@ public class menuContinuePanel extends javax.swing.JPanel {
         btnCredit.setContentAreaFilled(false);
         btnCredit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCredit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnCreditMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnCreditMouseEntered(evt);
             }
@@ -75,6 +78,9 @@ public class menuContinuePanel extends javax.swing.JPanel {
         btnContinue.setContentAreaFilled(false);
         btnContinue.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnContinue.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnContinueMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnContinueMouseEntered(evt);
             }
@@ -98,6 +104,9 @@ public class menuContinuePanel extends javax.swing.JPanel {
         btnOption.setContentAreaFilled(false);
         btnOption.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnOption.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnOptionMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnOptionMouseEntered(evt);
             }
@@ -121,6 +130,9 @@ public class menuContinuePanel extends javax.swing.JPanel {
         btnExit.setContentAreaFilled(false);
         btnExit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnExit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnExitMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnExitMouseEntered(evt);
             }
@@ -141,31 +153,41 @@ public class menuContinuePanel extends javax.swing.JPanel {
 
     private void btnContinueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContinueActionPerformed
         // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
         mainFrame.showPanel(new mapPanel(mainFrame));
     }//GEN-LAST:event_btnContinueActionPerformed
 
     private void btnOptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOptionActionPerformed
         // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
     }//GEN-LAST:event_btnOptionActionPerformed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
         // TODO add your handling code here:
-        System.exit(0);
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
+        int pilihan = JOptionPane.showConfirmDialog(this,
+                "Apakah anda yakin ingin Keluar?", "Exit", 
+                JOptionPane.YES_NO_OPTION);
+        if (pilihan == JOptionPane.YES_OPTION) {
+            System.exit(0);}
     }//GEN-LAST:event_btnExitActionPerformed
 
     private void btnContinueMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnContinueMouseEntered
         // TODO add your handling code here:
         btnContinue.setBorderPainted(true);
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\HOVER SFX.wav");
     }//GEN-LAST:event_btnContinueMouseEntered
 
     private void btnOptionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOptionMouseEntered
         // TODO add your handling code here:
         btnOption.setBorderPainted(true);
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\HOVER SFX.wav");
     }//GEN-LAST:event_btnOptionMouseEntered
 
     private void btnExitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnExitMouseEntered
         // TODO add your handling code here:
         btnExit.setBorderPainted(true);
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\HOVER SFX.wav");
     }//GEN-LAST:event_btnExitMouseEntered
 
     private void btnContinueMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnContinueMouseExited
@@ -185,6 +207,7 @@ public class menuContinuePanel extends javax.swing.JPanel {
 
     private void btnCreditMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCreditMouseEntered
         // TODO add your handling code here:
+        mainFrame.playMusic("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\HOVER SFX.wav");
     }//GEN-LAST:event_btnCreditMouseEntered
 
     private void btnCreditMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCreditMouseExited
@@ -193,8 +216,29 @@ public class menuContinuePanel extends javax.swing.JPanel {
 
     private void btnCreditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreditActionPerformed
         // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
         mainFrame.showPanel(new creditPanel(mainFrame));
     }//GEN-LAST:event_btnCreditActionPerformed
+
+    private void btnCreditMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCreditMouseClicked
+        // TODO add your handling code here:
+        mainFrame.playMusic("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
+    }//GEN-LAST:event_btnCreditMouseClicked
+
+    private void btnContinueMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnContinueMouseClicked
+        // TODO add your handling code here:
+        mainFrame.playMusic("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
+    }//GEN-LAST:event_btnContinueMouseClicked
+
+    private void btnOptionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOptionMouseClicked
+        // TODO add your handling code here:
+        mainFrame.playMusic("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
+    }//GEN-LAST:event_btnOptionMouseClicked
+
+    private void btnExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnExitMouseClicked
+        // TODO add your handling code here:
+        mainFrame.playMusic("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
+    }//GEN-LAST:event_btnExitMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

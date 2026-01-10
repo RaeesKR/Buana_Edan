@@ -60,6 +60,11 @@ public class FightLevel1 extends javax.swing.JPanel {
         btnAttck.setContentAreaFilled(false);
         btnAttck.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAttck.setPreferredSize(new java.awt.Dimension(120, 40));
+        btnAttck.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAttckMouseClicked(evt);
+            }
+        });
         btnAttck.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAttckActionPerformed(evt);
@@ -72,6 +77,11 @@ public class FightLevel1 extends javax.swing.JPanel {
         btnDeff.setContentAreaFilled(false);
         btnDeff.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnDeff.setPreferredSize(new java.awt.Dimension(120, 40));
+        btnDeff.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnDeffMouseClicked(evt);
+            }
+        });
         btnDeff.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeffActionPerformed(evt);
@@ -102,6 +112,7 @@ public class FightLevel1 extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnDeffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeffActionPerformed
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\Deff.wav");
         if (player == null || monster == null) return;
 
         performPlayerAction(false);
@@ -116,6 +127,7 @@ public class FightLevel1 extends javax.swing.JPanel {
 
     private void btnAttckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAttckActionPerformed
         // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\Sword.wav");
          if (player == null || monster == null) return;
 
         performPlayerAction(true);
@@ -127,6 +139,16 @@ public class FightLevel1 extends javax.swing.JPanel {
             }
         }
     }//GEN-LAST:event_btnAttckActionPerformed
+
+    private void btnAttckMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAttckMouseClicked
+        // TODO add your handling code here:
+        mainFrame.playMusic("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\Sword.wav");
+    }//GEN-LAST:event_btnAttckMouseClicked
+
+    private void btnDeffMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDeffMouseClicked
+        // TODO add your handling code here:
+        mainFrame.playMusic("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
+    }//GEN-LAST:event_btnDeffMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -245,7 +267,7 @@ public class FightLevel1 extends javax.swing.JPanel {
                 }
                 player.restoreFullHp();
                 updateHpLabels();
-                JOptionPane.showMessageDialog(this, "Kamu kalah. HP direset", "Kalah", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Kamu kalah", "Kalah", JOptionPane.INFORMATION_MESSAGE);
             }
         }
     }

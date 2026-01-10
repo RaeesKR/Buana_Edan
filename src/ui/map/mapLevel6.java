@@ -30,8 +30,6 @@ public class mapLevel6 extends javax.swing.JPanel {
         this.mainFrame = mainFrame;
         // obtain player from mainFrame (if set)
         this.player = (mainFrame != null) ? mainFrame.getPlayer() : null;
-        // initialize monster for this level
-        this.monster = new Monster("Wyvern", 160, 20, 12);
 
     }
     
@@ -45,8 +43,9 @@ public class mapLevel6 extends javax.swing.JPanel {
     private void initComponents() {
 
         btnInventory = new javax.swing.JButton();
-        btnback = new javax.swing.JButton();
         btnFightt = new javax.swing.JButton();
+        btnback = new javax.swing.JButton();
+        Tas = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -65,6 +64,9 @@ public class mapLevel6 extends javax.swing.JPanel {
         btnInventory.setMinimumSize(new java.awt.Dimension(72, 10));
         btnInventory.setPreferredSize(new java.awt.Dimension(72, 10));
         btnInventory.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnInventoryMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnInventoryMouseEntered(evt);
             }
@@ -77,26 +79,43 @@ public class mapLevel6 extends javax.swing.JPanel {
                 btnInventoryActionPerformed(evt);
             }
         });
-        add(btnInventory, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 460, 90, 90));
-
-        btnback.setText("Back");
-        btnback.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnbackActionPerformed(evt);
-            }
-        });
-        add(btnback, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 16, -1, -1));
+        add(btnInventory, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 440, 130, 120));
 
         btnFightt.setBorderPainted(false);
         btnFightt.setContentAreaFilled(false);
         btnFightt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnFightt.setFocusable(false);
+        btnFightt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnFighttMouseClicked(evt);
+            }
+        });
         btnFightt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFighttActionPerformed(evt);
             }
         });
         add(btnFightt, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 3, 800, 600));
+
+        btnback.setText("Back");
+        btnback.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnback.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnbackMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnbackMouseEntered(evt);
+            }
+        });
+        btnback.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnbackActionPerformed(evt);
+            }
+        });
+        add(btnback, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
+        Tas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resource/images/background/—Pngtree—medieval magic backpack_7111733.png-rmbg.png-rmbg.png"))); // NOI18N
+        add(Tas, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 150, 130));
 
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -108,14 +127,10 @@ public class mapLevel6 extends javax.swing.JPanel {
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
-        // TODO add your handling code here:
-        mainFrame.showPanel(new mapPanel(mainFrame));
-    }//GEN-LAST:event_btnbackActionPerformed
-
     private void btnFighttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFighttActionPerformed
         // TODO add your handling code here:
         // Ensure we have a player instance
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
         if (this.player == null && this.mainFrame != null) {
             this.player = this.mainFrame.getPlayer();
         }
@@ -126,18 +141,22 @@ public class mapLevel6 extends javax.swing.JPanel {
         }
 
         // Level-specific dialog content
-        String message = "Kamu memasuki level 1. Di hadapanmu muncul seekor Goblin yang tampak agresif. Siap untuk bertarung?";
-
-        // Ask for confirmation to start the fight
-        int confirm = JOptionPane.showConfirmDialog(this, message, "Encounter - Level 1", JOptionPane.YES_NO_OPTION);
-        if (confirm != JOptionPane.YES_OPTION) {
-            return;
-        }
+        String message = "Siapa kau? Beraninya kau menginjakkan kaki ke istana ini";
+        String message2 = "Aku? hanya warga biasa dari desa Soloan";
+        String message3 = "Jika kau berani menginjakkan kaki kesini, artinya kau sudah siap untuk mati";
+        String message4 = "Mati? Maksudnya kau?";
+        String message5 = "Sombong juga, Panglima Gildenfrost, habisi dia";
+        
+        JOptionPane.showMessageDialog(this, message, "Prince Aurelius",JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(this, message2, player.getName() ,JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(this, message3, "Prince Aurelius",JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(this, message4, player.getName() ,JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(this, message5, "Prince Aurelius" ,JOptionPane.INFORMATION_MESSAGE);
 
         // After dialog is closed, switch to the dedicated fight panel (FightLevel1)
         if (this.mainFrame != null) {
             // create first-stage monster (Keroco) for fight
-            Monster fightMonster = new Monster("Goblin", 30, 6, 2);
+            Monster fightMonster = new Monster("Gildenfrost", 260, 28, 5);
             ui.fight.FightLevel1 fightPanel = new ui.fight.FightLevel1(this.mainFrame, this.player, fightMonster);
             this.mainFrame.showPanel(fightPanel);
         } else {
@@ -154,10 +173,12 @@ public class mapLevel6 extends javax.swing.JPanel {
 
     private void btnInventoryMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInventoryMouseExited
         // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\HOVER SFX.wav");
         btnInventory.setBorderPainted(false);
     }//GEN-LAST:event_btnInventoryMouseExited
 
     private void btnInventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInventoryActionPerformed
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
         Player p = (mainFrame != null) ? mainFrame.getPlayer() : null;
         if (p == null) {
             JOptionPane.showMessageDialog(this, "Player belum diset. Silakan login terlebih dahulu.", "Inventory", JOptionPane.INFORMATION_MESSAGE);
@@ -169,9 +190,36 @@ public class mapLevel6 extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnInventoryActionPerformed
 
+    private void btnbackMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnbackMouseEntered
+        // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\HOVER SFX.wav");
+    }//GEN-LAST:event_btnbackMouseEntered
+
+    private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
+        // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
+        mainFrame.showPanel(new mapPanel(mainFrame));
+    }//GEN-LAST:event_btnbackActionPerformed
+
+    private void btnInventoryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInventoryMouseClicked
+        // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
+    }//GEN-LAST:event_btnInventoryMouseClicked
+
+    private void btnFighttMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFighttMouseClicked
+        // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
+    }//GEN-LAST:event_btnFighttMouseClicked
+
+    private void btnbackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnbackMouseClicked
+        // TODO add your handling code here:
+        mainFrame.playSFX("C:\\Users\\Dhenis\\Documents\\NetBeansProjects\\Kyojin_Gemu\\src\\resource\\sounds\\CLICK SFX.wav");
+    }//GEN-LAST:event_btnbackMouseClicked
+
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Tas;
     private javax.swing.JButton btnFightt;
     private javax.swing.JButton btnInventory;
     private javax.swing.JButton btnback;
